@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Антон Гребенкин — Senior .NET Developer</title>
+  <meta name="description" content="Senior .NET/C# разработчик: финтех, распределенные системы, интеграции, надежность, CI/CD." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --text:#e9eefc;
+      --muted:#b7c3e6;
+      --accent:#7aa2ff;
+      --line:rgba(255,255,255,.10);
+      --chip:rgba(122,162,255,.14);
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font: 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(122,162,255,.20), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(125,211,252,.13), transparent 55%),
+                  var(--bg);
+    }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{
+      max-width: 1040px;
+      margin: 32px auto;
+      padding: 0 18px;
+    }
+    header{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 22px 22px;
+      background: rgba(15,26,46,.75);
+      border:1px solid var(--line);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+    }
+    h1{
+      margin:0;
+      font-size: 30px;
+      letter-spacing: .2px;
+    }
+    .role{
+      margin-top:6px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .summary{
+      margin-top: 12px;
+      color: var(--text);
+    }
+    .meta{
+      display:grid;
+      gap:10px;
+      padding-left: 10px;
+    }
+    .meta .row{
+      display:flex; gap:10px; align-items:baseline; flex-wrap:wrap;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.03);
+    }
+    .meta .k{ color: var(--muted); min-width: 110px; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+      align-items: start;
+    }
+    section{
+      background: rgba(15,26,46,.65);
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 18px;
+    }
+    section h2{
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      color: var(--muted);
+      letter-spacing: .4px;
+      text-transform: uppercase;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .chip{
+      border:1px solid var(--line);
+      background: var(--chip);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .item{
+      border-top:1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+    .item:first-of-type{
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .item .top{
+      display:flex;
+      gap: 10px;
+      justify-content: space-between;
+      flex-wrap:wrap;
+      align-items: baseline;
+    }
+    .item h3{
+      margin:0;
+      font-size: 16px;
+    }
+    .item .when{
+      color: var(--muted);
+      font-size: 13px;
+    }
+    ul{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--text);
+    }
+    li{ margin: 6px 0; }
+    .muted{ color: var(--muted); }
+    .small{ font-size: 13px; }
+    footer{
+      margin: 18px 0 30px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    @media (max-width: 900px){
+      header{ grid-template-columns: 1fr; }
+      .grid{ grid-template-columns: 1fr; }
+      .meta{ padding-left: 0; }
+    }
+    @media print{
+      body{ background: #fff; color:#111; }
+      header, section{ background: #fff; border:1px solid #ddd; }
+      a{ color:#111; text-decoration: underline; }
+      .chip{ background:#f3f4f6; border:1px solid #e5e7eb; color:#111; }
+      .meta .row{ background:#fff; border:1px solid #e5e7eb; }
+      .muted{ color:#444; }
+      footer{ display:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Антон Гребенкин</h1>
+        <div class="role">Senior .NET / C# Developer · FinTech · Distributed Systems</div>
+        <p class="summary">
+          Senior .NET‑разработчик (7+ лет): проектирование и разработка backend‑сервисов, интеграции,
+          работа с БД, надежность и производительность. Участвую в проработке требований,
+          ревью кода, инцидентах и настройке CI/CD. Двигаюсь в сторону техлида/архитектора.
+        </p>
+      </div>
+
+      <div class="meta">
+        <div class="row"><span class="k">Локация</span><span>Новосибирск · удалённо · готов к переезду</span></div>
+        <div class="row"><span class="k">Email</span><a href="mailto:grebenkin.anton.97@gmail.com">grebenkin.anton.97@gmail.com</a></div>
+        <div class="row"><span class="k">Телефон</span><a href="tel:+79529475374">+7 952 947-53-74</a></div>
+        <div class="row"><span class="k">GitHub</span><a href="https://github.com/Anton-Grebenkin" target="_blank" rel="noreferrer">github.com/Anton-Grebenkin</a></div>
+        <div class="row"><span class="k">Языки</span><span>RU (родной), EN (B1)</span></div>
+        <div class="row"><span class="k">Ожидания</span><span>Senior .NET · 350 000 ₽ net</span></div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section>
+        <h2>Ключевые компетенции</h2>
+        <div class="chips">
+          <span class="chip">ASP.NET Core Web API</span>
+          <span class="chip">.NET 6–8</span>
+          <span class="chip">gRPC / HTTP</span>
+          <span class="chip">PostgreSQL / MS SQL</span>
+          <span class="chip">Redis</span>
+          <span class="chip">RabbitMQ / Kafka</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Kubernetes</span>
+          <span class="chip">CI/CD (GitLab)</span>
+          <span class="chip">Observability: Prometheus/Grafana</span>
+          <span class="chip">Тесты: unit/integration</span>
+          <span class="chip">Code Review / Mentoring</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Обо мне (коротко)</h2>
+        <p class="muted" style="margin:0">
+          Финтех и интеграции, микросервисная архитектура, надежность и эксплуатация.
+          Люблю прозрачные процессы, декомпозицию задач и долгосрочное качество решений.
+        </p>
+        <div class="item">
+          <div class="top">
+            <h3>Фокус в развитии</h3>
+          </div>
+          <ul>
+            <li>Архитектура распределенных систем, практики DevOps/SRE</li>
+            <li>Усиление лидерских компетенций: менторство, онбординг, тех. решения</li>
+          </ul>
+        </div>
+      </section>
+
+      <section style="grid-column: 1 / -1;">
+        <h2>Опыт</h2>
+
+        <div class="item">
+          <div class="top">
+            <h3>Финтех Айкью — Senior .NET/C# Developer</h3>
+            <div class="when">Фев 2024 — н.в.</div>
+          </div>
+          <div class="muted small">Платежный сервис · Сервис уведомлений (SMS / email / push)</div>
+          <ul>
+            <li>Проработка требований с бизнесом и аналитиками, формирование постановок задач</li>
+            <li>Проектирование архитектуры сервисов и интеграций со сторонними системами</li>
+            <li>Unit/Integration тесты, code review, онбординг и менторство</li>
+            <li>Инциденты и повышение надежности, настройка CI/CD</li>
+          </ul>
+          <div class="chips" style="margin-top:10px">
+            <span class="chip">.NET 7/8</span><span class="chip">Blazor</span><span class="chip">PostgreSQL</span>
+            <span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">RabbitMQ</span>
+            <span class="chip">Kafka</span><span class="chip">ClickHouse</span><span class="chip">K8s</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <h3>IT-incubator — Ментор (SQL / реляционные БД)</h3>
+            <div class="when">Янв 2024 — Апр 2025</div>
+          </div>
+          <ul>
+            <li>Онлайн‑занятия по SQL и реляционным БД, разбор практики</li>
+            <li>Проверка домашних заданий и code review</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <h3>Finstar Financial Group — Senior .NET/C# Developer</h3>
+            <div class="when">Дек 2022 — Фев 2024</div>
+          </div>
+          <div class="muted small">Кредитный конвейер</div>
+          <ul>
+            <li>Поддержка и развитие функционала сервиса подачи заявки на кредит</li>
+            <li>Ревью кода, инциденты, оптимизация БД</li>
+            <li>Миграция сервиса с .NET Framework 4.7.2 на .NET 6</li>
+            <li>Частичный перенос бизнес‑логики из БД на уровень приложения</li>
+          </ul>
+          <div class="chips" style="margin-top:10px">
+            <span class="chip">.NET 6</span><span class="chip">ASP.NET Core</span><span class="chip">MS SQL</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <h3>АйтиСФ — Middle .NET/C# Developer</h3>
+            <div class="when">Мар 2022 — Дек 2022</div>
+          </div>
+          <div class="muted small">Внутренняя CRM</div>
+          <ul>
+            <li>Развитие CRM, проработка требований, инциденты и ревью</li>
+            <li>Оптимизация БД: снижение нагрузки с ~90% до ~30% (по вашему резюме)</li>
+            <li>Внедрение изменений, ускоривших процессы андеррайтинга</li>
+          </ul>
+          <div class="chips" style="margin-top:10px">
+            <span class="chip">.NET Core 2.2 / .NET 6</span><span class="chip">PostgreSQL</span><span class="chip">MVC/Web API</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <h3>ООО «Инфопуш» — Junior .NET/C# Developer</h3>
+            <div class="when">Мар 2021 — Мар 2022</div>
+          </div>
+          <div class="muted small">Лояльность · Apple Wallet · Webhooks · кассовое оборудование</div>
+          <ul>
+            <li>Сбор требований, поддержка, исправление ошибок, разработки интеграций</li>
+            <li>Переписал внутренний API с .NET Framework 4.7.2 на .NET 5</li>
+            <li>Разработал сервис Webhook‑уведомлений и сервис электронных карт лояльности</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <h3>ООО «Информа» — Техподдержка (3 линия)</h3>
+            <div class="when">Дек 2018 — Мар 2021</div>
+          </div>
+          <ul>
+            <li>Поиск и устранение ошибок в БД, SQL‑запросы и хранимые процедуры</li>
+            <li>Интеграции и обмен данными с внешними системами</li>
+            <li>Утилита на C# WinForms для автоматизации обработки/выгрузки dbf‑файлов</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Образование</h2>
+        <div class="item">
+          <div class="top">
+            <h3>НГУ, мех‑мат — Математика (неоконченное)</h3>
+            <div class="when">2019</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Курсы и сертификаты</h2>
+        <ul>
+          <li>OTUS — Software Architect (2025)</li>
+          <li>Foundational C# with Microsoft (2023)</li>
+          <li>SQL (Advanced) Certificate</li>
+          <li>C# (Basic) Certificate (2021)</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      Последнее обновление: 2026-02-20 · Можно распечатать в PDF через браузер (Ctrl/Cmd+P)
+    </footer>
+  </div>
+</body>
+</html>
