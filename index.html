@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Резюме — Антон Гребенкин, Senior .NET/C# разработчик" />
   <title>Антон Гребенкин — Senior .NET/C# Developer</title>
+
+  <!-- ─── FAVICON (SVG, встроенный) ─── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f6feb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='white'%3E%7B%7D%3C/text%3E%3C/svg%3E" />
+
   <style>
     /* ─── ТЁМНАЯ ТЕМА (default) ─── */
     :root, [data-theme="dark"] {
@@ -26,6 +30,7 @@
       --vbtn-bg: rgba(47,111,235,.18); --vbtn-bd: rgba(47,111,235,.45);
       --vbtn-bg-off: rgba(47,111,235,.07); --vbtn-bd-off: rgba(47,111,235,.22);
       --vbtn-active-bg: #2f6feb; --vbtn-active-text: #fff;
+      --dl-bg: #2f6feb; --dl-bg-h: #1a56cc; --dl-text: #fff;
     }
     /* ─── СВЕТЛАЯ ТЕМА ─── */
     [data-theme="light"] {
@@ -47,6 +52,7 @@
       --vbtn-bg: rgba(26,86,204,.18); --vbtn-bd: rgba(26,86,204,.50);
       --vbtn-bg-off: rgba(26,86,204,.06); --vbtn-bd-off: rgba(26,86,204,.20);
       --vbtn-active-bg: #1a56cc; --vbtn-active-text: #fff;
+      --dl-bg: #1a56cc; --dl-bg-h: #0e3fa8; --dl-text: #fff;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -64,8 +70,6 @@
 
     /* ═══════════════════════════════════════
        ПАНЕЛЬ УПРАВЛЕНИЯ
-       — на мобиле: одна строка во всю ширину,
-         переключатель версии растянут, тема справа
     ═══════════════════════════════════════ */
     .controls {
       display: flex;
@@ -74,8 +78,6 @@
       margin-bottom: 14px;
       gap: 10px;
     }
-
-    /* левая часть: переключатель + подпись */
     .controls-left {
       display: flex;
       align-items: center;
@@ -83,15 +85,12 @@
       flex: 1;
       min-width: 0;
     }
-
-    /* ── сегментированный переключатель версии ── */
     .version-switch {
       display: inline-flex;
       border-radius: 999px;
       border: 1px solid var(--vbtn-bd-off);
       overflow: hidden;
       background: var(--vbtn-bg-off);
-      /* минимальная высота для удобного тапа */
       min-height: 38px;
     }
     .version-switch button {
@@ -105,12 +104,10 @@
       transition: background .2s, color .2s;
       border-radius: 0;
       white-space: nowrap;
-      /* удобная область тапа */
       min-height: 38px;
       line-height: 1.2;
     }
     .version-switch button.active {
-      /* заливка акцентным цветом — хорошо видно в обеих темах */
       background: var(--vbtn-active-bg);
       color: var(--vbtn-active-text);
       font-weight: 600;
@@ -120,17 +117,13 @@
       background: var(--btn-bg);
       color: var(--text);
     }
-
     .version-label {
       font-size: 12px;
       color: var(--muted);
-      /* скрываем подпись на узких экранах — не хватает места */
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-
-    /* правая часть: кнопка темы */
     .theme-toggle { display: flex; flex-shrink: 0; }
     .theme-btn {
       display: inline-flex; align-items: center; gap: 7px;
@@ -180,6 +173,26 @@
       padding: 5px 10px; border-radius: 999px;
       background: var(--meta-bg); border: 1px solid var(--meta-bd);
       backdrop-filter: blur(6px); transition: background .25s, border-color .25s;
+    }
+
+    /* ─── БЕЙДЖ «краткое резюме» ─── */
+    /* Вынесен в отдельную строку под h1, не ломает layout */
+    .short-badge-wrap {
+      display: none;           /* скрыт по умолчанию */
+      margin-top: 4px;
+    }
+    body.short-view .short-badge-wrap { display: block; }
+
+    .short-badge {
+      display: inline-block;
+      font-size: 11.5px;
+      color: var(--brand);
+      background: var(--chipBg);
+      border: 1px solid var(--chipBd);
+      border-radius: 999px;
+      padding: 3px 10px;
+      line-height: 1.4;
+      white-space: nowrap;
     }
 
     /* ─── GRID (about + skills) ─── */
@@ -251,25 +264,45 @@
     }
     .btn:hover { border-color: var(--btn-bd-h); background: var(--btn-bg-h); }
 
-    /* ─── BADGE «короткая версия» ─── */
-    .short-badge {
-      display: none;
-      font-size: 11.5px;
-      color: var(--brand);
-      background: var(--chipBg);
-      border: 1px solid var(--chipBd);
-      border-radius: 999px;
-      padding: 3px 10px;
-      margin-left: 8px;
-      vertical-align: middle;
-    }
-    body.short-view .short-badge { display: inline; }
-
     /* ─── КОРОТКАЯ ВЕРСИЯ: что скрываем ─── */
     body.short-view .long-only { display: none !important; }
     body.short-view .about-full { display: none !important; }
     body.short-view .about-short { display: block !important; }
     .about-short { display: none; }
+
+    /* ─── КНОПКА СКАЧАТЬ ─── */
+    .download-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 32px;
+      border-radius: 999px;
+      border: none;
+      background: var(--dl-bg);
+      color: var(--dl-text);
+      font-size: 15px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(47,111,235,.35);
+      transition: background .2s, box-shadow .2s, transform .15s;
+      text-decoration: none;
+      border-bottom: none;
+      letter-spacing: .2px;
+    }
+    .download-btn:hover {
+      background: var(--dl-bg-h);
+      box-shadow: 0 6px 24px rgba(47,111,235,.45);
+      transform: translateY(-1px);
+      border-bottom: none;
+    }
+    .download-btn:active { transform: translateY(0); }
+    .download-btn .dl-icon { font-size: 18px; line-height: 1; }
 
     /* ─── FOOTER ─── */
     .footer { margin-top: 20px; color: var(--muted); font-size: 13px; text-align: center; }
@@ -299,38 +332,32 @@
       .chip { font-size: 12px; padding: 4px 9px; }
       .chips { gap: 6px; }
 
-      /* ── панель на мобиле: одна строка, растянуть переключатель ── */
       .controls {
-        flex-wrap: nowrap;       /* всё в одну строку */
+        flex-wrap: nowrap;
         gap: 8px;
         margin-bottom: 12px;
       }
       .controls-left {
         flex: 1;
         min-width: 0;
-        gap: 0;                  /* подпись прячем — места нет */
+        gap: 0;
       }
-      /* переключатель версии растягивается на всю доступную ширину */
       .version-switch {
         flex: 1;
         min-width: 0;
       }
-      /* каждая кнопка занимает половину блока */
       .version-switch button {
         flex: 1;
         text-align: center;
         padding: 9px 8px;
         font-size: 13px;
       }
-      /* подпись-хинт скрываем на узком экране */
       .version-label { display: none; }
-
-      /* кнопка темы: только иконка, без текста */
       .theme-btn .theme-label-text { display: none; }
-      .theme-btn {
-        padding: 9px 12px;
-        gap: 0;
-      }
+      .theme-btn { padding: 9px 12px; gap: 0; }
+
+      /* кнопка скачать — чуть меньше на мобиле */
+      .download-btn { font-size: 14px; padding: 12px 24px; }
     }
 
     @media (max-width: 400px) {
@@ -355,6 +382,8 @@
       a { color: #111; border-bottom: none; }
       .btn { display: none; }
       .controls { display: none; }
+      /* скрываем кнопку скачать при печати */
+      .download-wrap { display: none; }
     }
   </style>
 </head>
@@ -387,7 +416,10 @@
       </div>
       <div class="hgroup">
         <h1>Антон Гребенкин</h1>
-        <p><span class="short-badge">краткое резюме</span></p>
+        <!-- бейдж «краткое резюме» в отдельной строке — не ломает layout -->
+        <div class="short-badge-wrap">
+          <span class="short-badge">⚡ краткое резюме</span>
+        </div>
         <div class="role">Senior .NET / C# Developer · финтех · распределённые системы · интеграции</div>
         <div class="meta">
           <span>Новосибирск · удалённо/гибрид · готов к командировкам</span>
