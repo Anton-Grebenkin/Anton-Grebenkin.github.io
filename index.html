@@ -1,272 +1,433 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Резюме — Антон Гребенкин, Senior .NET/C# разработчик" />
   <title>Антон Гребенкин — Senior .NET/C# Developer</title>
   <style>
-    :root{
-      /* Lighter, less purple, more blue/neutral */
+    /* ─── ТЕМНАЯ ТЕМА (default) ─── */
+    :root, [data-theme="dark"] {
       --bg: #0e1526;
       --surface: #131d36;
-      --surface2:#101a31;
-
+      --surface2: #101a31;
+      --header-bg: rgba(255,255,255,.055);
+      --header-bg2: rgba(255,255,255,.02);
+      --card-bg: rgba(255,255,255,.05);
+      --card-bg2: rgba(255,255,255,.02);
       --text: #eef2ff;
-      --muted:#c2ccef;
+      --muted: #c2ccef;
       --line: rgba(255,255,255,.10);
-
-      --brand: #2f6feb;      /* single accent color */
+      --brand: #2f6feb;
       --brandGlow: rgba(47,111,235,.22);
-
       --chipBg: rgba(47,111,235,.14);
       --chipBd: rgba(47,111,235,.30);
-
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --shadow2: 0 8px 22px rgba(0,0,0,.28);
-      --radius: 16px;
+      --proj-bg: rgba(16,26,49,.55);
+      --proj-bd: rgba(47,111,235,.16);
+      --meta-bg: rgba(15,23,51,.45);
+      --meta-bd: rgba(47,111,235,.18);
+      --btn-bg: rgba(47,111,235,.12);
+      --btn-bd: rgba(47,111,235,.26);
+      --btn-bg-h: rgba(47,111,235,.16);
+      --btn-bd-h: rgba(47,111,235,.45);
+      --accent-g1: rgba(47,111,235,.16);
+      --accent-g2: rgba(56,189,248,.10);
+      --accent-g3: rgba(47,111,235,.30);
+      --accent-g4: rgba(56,189,248,.12);
+      --toggle-bg: rgba(47,111,235,.18);
+      --toggle-bd: rgba(47,111,235,.35);
+      --toggle-color: #c2ccef;
     }
 
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue";
+    /* ─── СВЕТЛАЯ ТЕМА ─── */
+    [data-theme="light"] {
+      --bg: #f0f4ff;
+      --surface: #ffffff;
+      --surface2: #e8eeff;
+      --header-bg: rgba(255,255,255,.85);
+      --header-bg2: rgba(255,255,255,.60);
+      --card-bg: rgba(255,255,255,.95);
+      --card-bg2: rgba(240,244,255,.80);
+      --text: #0f1b3d;
+      --muted: #4a5980;
+      --line: rgba(0,0,0,.10);
+      --brand: #1a56cc;
+      --brandGlow: rgba(26,86,204,.18);
+      --chipBg: rgba(26,86,204,.08);
+      --chipBd: rgba(26,86,204,.22);
+      --shadow: 0 10px 30px rgba(0,0,0,.10);
+      --shadow2: 0 8px 22px rgba(0,0,0,.08);
+      --proj-bg: rgba(230,238,255,.65);
+      --proj-bd: rgba(26,86,204,.18);
+      --meta-bg: rgba(220,230,255,.60);
+      --meta-bd: rgba(26,86,204,.20);
+      --btn-bg: rgba(26,86,204,.09);
+      --btn-bd: rgba(26,86,204,.25);
+      --btn-bg-h: rgba(26,86,204,.15);
+      --btn-bd-h: rgba(26,86,204,.45);
+      --accent-g1: rgba(26,86,204,.10);
+      --accent-g2: rgba(56,189,248,.07);
+      --accent-g3: rgba(26,86,204,.18);
+      --accent-g4: rgba(56,189,248,.09);
+      --toggle-bg: rgba(26,86,204,.10);
+      --toggle-bd: rgba(26,86,204,.28);
+      --toggle-color: #1a56cc;
+    }
+
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue";
       background: var(--bg);
       color: var(--text);
       line-height: 1.55;
+      transition: background .25s, color .25s;
     }
 
-    a{
+    a {
       color: var(--text);
       text-decoration: none;
-      border-bottom: 1px solid rgba(47,111,235,.55);
+      border-bottom: 1px solid color-mix(in srgb, var(--brand) 55%, transparent);
     }
-    a:hover{ border-bottom-color: rgba(47,111,235,.95); }
+    a:hover { border-bottom-color: var(--brand); }
 
-    .container{ max-width:1100px; margin:0 auto; padding:32px 18px 64px; }
+    /* ─── LAYOUT ─── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
 
-    header{
+    /* ─── THEME TOGGLE ─── */
+    .theme-toggle {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 12px;
+    }
+    .theme-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--toggle-bd);
+      background: var(--toggle-bg);
+      color: var(--toggle-color);
+      font-size: 13px;
+      cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s;
+      font-family: inherit;
+    }
+    .theme-btn:hover {
+      background: var(--btn-bg-h);
+      border-color: var(--btn-bd-h);
+    }
+    .theme-btn .icon { font-size: 15px; line-height: 1; }
+
+    /* ─── HEADER ─── */
+    header {
       position: relative;
-      overflow:hidden;
-      border-radius: calc(var(--radius) + 2px);
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--header-bg), var(--header-bg2));
       box-shadow: var(--shadow);
-      padding: 22px;
+      padding: 20px;
+      transition: background .25s, border-color .25s;
     }
-    header::before{
-      content:"";
-      position:absolute;
-      inset:-2px -2px auto -2px;
-      height:150px;
+    header::before {
+      content: "";
+      position: absolute;
+      inset: -2px -2px auto -2px;
+      height: 150px;
       background:
-        radial-gradient(900px 240px at 20% 10%, rgba(47,111,235,.30), transparent 60%),
-        radial-gradient(900px 240px at 85% 15%, rgba(56,189,248,.12), transparent 60%),
-        linear-gradient(90deg, rgba(47,111,235,.16), rgba(56,189,248,.08));
-      opacity:.95;
-      pointer-events:none;
+        radial-gradient(900px 240px at 20% 10%, var(--accent-g3), transparent 60%),
+        radial-gradient(900px 240px at 85% 15%, var(--accent-g4), transparent 60%),
+        linear-gradient(90deg, var(--accent-g1), var(--accent-g2));
+      opacity: .9;
+      pointer-events: none;
+      transition: opacity .25s;
     }
-    header > *{ position:relative; }
+    header > * { position: relative; }
 
-    .top{
-      display:grid;
-      grid-template-columns: 160px 1fr; /* bigger photo */
-      gap:18px;
-      align-items:center;
+    /* ─── TOP (photo + hgroup) ─── */
+    .top {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 18px;
+      align-items: center;
     }
 
-    .photo{
-      width:160px; height:160px;
-      border-radius:20px;
-      border:1px solid rgba(47,111,235,.32);
-      overflow:hidden;
-      background: rgba(255,255,255,.05);
+    .photo {
+      width: 150px; height: 150px;
+      border-radius: 20px;
+      border: 1px solid color-mix(in srgb, var(--brand) 32%, transparent);
+      overflow: hidden;
+      background: rgba(127,127,127,.08);
       box-shadow: var(--shadow2);
+      flex-shrink: 0;
     }
-    .photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    .hgroup h1{
-      margin:0;
-      font-size:30px;
-      letter-spacing:.2px;
+    .hgroup h1 {
+      margin: 0;
+      font-size: clamp(20px, 3.5vw, 30px);
+      letter-spacing: .2px;
     }
-    .role{
-      margin-top:6px;
+    .role {
+      margin-top: 6px;
       color: var(--muted);
-      font-size:16px;
+      font-size: clamp(13px, 2vw, 15.5px);
+      line-height: 1.45;
     }
 
-    .meta{
-      margin-top:12px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px 12px;
+    .meta {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
       color: var(--muted);
-      font-size:13.5px;
+      font-size: 13px;
     }
-    .meta span{
-      padding:6px 10px;
-      border-radius:999px;
-      background: rgba(15,23,51,.45);
-      border:1px solid rgba(47,111,235,.18);
+    .meta span {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--meta-bg);
+      border: 1px solid var(--meta-bd);
       backdrop-filter: blur(6px);
+      transition: background .25s, border-color .25s;
     }
 
-    .grid{
-      margin-top:18px;
-      display:grid;
+    /* ─── GRID (about + skills) ─── */
+    .grid {
+      margin-top: 18px;
+      display: grid;
       grid-template-columns: 1.2fr .8fr;
-      gap:18px;
+      gap: 16px;
     }
 
-    .card{
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    /* ─── CARDS ─── */
+    .card {
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--card-bg), var(--card-bg2));
       box-shadow: var(--shadow2);
-      padding:18px;
+      padding: 18px;
+      transition: background .25s, border-color .25s;
     }
-
-    .card.accent{
-      border-color: rgba(47,111,235,.22);
+    .card.accent {
+      border-color: color-mix(in srgb, var(--brand) 22%, transparent);
       background:
-        radial-gradient(900px 260px at 18% 0%, rgba(47,111,235,.16), transparent 55%),
-        radial-gradient(900px 260px at 92% 20%, rgba(56,189,248,.10), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+        radial-gradient(900px 260px at 18% 0%, var(--accent-g1), transparent 55%),
+        radial-gradient(900px 260px at 92% 20%, var(--accent-g2), transparent 55%),
+        linear-gradient(180deg, var(--card-bg), var(--card-bg2));
     }
 
-    h2{
-      margin:0 0 10px;
-      font-size:13px;
-      letter-spacing:.55px;
-      text-transform:uppercase;
-      color: rgba(238,242,255,.90);
+    h2 {
+      margin: 0 0 10px;
+      font-size: 12.5px;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: var(--text);
+      opacity: .88;
     }
 
-    p{ margin:10px 0; color: rgba(238,242,255,.94); }
-    .muted{ color: var(--muted); }
+    p { margin: 10px 0; color: var(--text); }
+    .muted { color: var(--muted); }
 
-    ul{ margin:10px 0 0 18px; padding:0; }
-    li{ margin:6px 0; color: rgba(238,242,255,.92); }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin: 6px 0; color: var(--text); }
 
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top:10px;
+    /* ─── CHIPS ─── */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
     }
-    /* unified color for all skills */
-    .chip{
-      border:1px solid var(--chipBd);
+    .chip {
+      border: 1px solid var(--chipBd);
       background: var(--chipBg);
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:13px;
-      color: rgba(238,242,255,.96);
-    }
-    .chip.alt, .chip.soft{ /* keep HTML compatibility if left somewhere */
-      border-color: var(--chipBd);
-      background: var(--chipBg);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      color: var(--text);
+      transition: background .25s, border-color .25s;
     }
 
-    .section{ margin-top:18px; }
+    /* ─── SECTIONS ─── */
+    .section { margin-top: 16px; }
 
-    .job{
-      border-top:1px solid rgba(255,255,255,.09);
-      padding-top:14px;
-      margin-top:14px;
+    .job {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 14px;
     }
-    .job:first-child{ border-top:none; padding-top:0; margin-top:0; }
+    .job:first-child { border-top: none; padding-top: 0; margin-top: 0; }
 
-    .jobhead{
-      display:flex;
-      gap:10px;
-      align-items:baseline;
-      justify-content:space-between;
-      flex-wrap:wrap;
+    .jobhead {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
-    .jobtitle{ font-size:16px; margin:0; }
-    .jobmeta{ color: var(--muted); font-size:13px; white-space:nowrap; }
+    .jobtitle { font-size: 15.5px; margin: 0; }
+    .jobmeta { color: var(--muted); font-size: 13px; white-space: nowrap; }
 
-    .proj{
-      margin-top:10px;
-      padding:12px 12px;
-      border-radius:14px;
-      background: rgba(16,26,49,.55);
-      border:1px solid rgba(47,111,235,.16);
+    /* ─── PROJECT BLOCKS ─── */
+    .proj {
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 14px;
+      background: var(--proj-bg);
+      border: 1px solid var(--proj-bd);
+      transition: background .25s, border-color .25s;
     }
-    .proj .label{
-      font-size:12.5px;
-      letter-spacing:.35px;
-      text-transform:uppercase;
-      color: rgba(194,204,239,.98);
-      margin-bottom:8px;
-      display:flex;
-      align-items:center;
-      gap:8px;
+    .proj .label {
+      font-size: 12px;
+      letter-spacing: .35px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .proj .label::before{
-      content:"";
-      width:10px; height:10px;
-      border-radius:3px;
+    .proj .label::before {
+      content: "";
+      width: 10px; height: 10px;
+      border-radius: 3px;
       background: linear-gradient(135deg, var(--brand), rgba(56,189,248,.75));
       box-shadow: 0 0 0 3px var(--brandGlow);
       flex: 0 0 auto;
     }
 
-    .cta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:12px;
+    /* ─── CTA BUTTONS ─── */
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
     }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(47,111,235,.26);
-      background: rgba(47,111,235,.12);
-      color: rgba(238,242,255,.96);
-      font-size:13.5px;
-      box-shadow: 0 8px 18px rgba(0,0,0,.22);
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--btn-bd);
+      background: var(--btn-bg);
+      color: var(--text);
+      font-size: 13px;
+      box-shadow: var(--shadow2);
+      transition: background .2s, border-color .2s;
     }
-    .btn:hover{
-      border-color: rgba(47,111,235,.45);
-      background: rgba(47,111,235,.16);
-    }
-
-    .footer{
-      margin-top:20px;
-      color: rgba(194,204,239,.92);
-      font-size:13px;
-      text-align:center;
+    .btn:hover {
+      border-color: var(--btn-bd-h);
+      background: var(--btn-bg-h);
     }
 
-    @media (max-width: 880px){
-      .grid{ grid-template-columns:1fr; }
-      .top{ grid-template-columns: 112px 1fr; }
-      .photo{ width:112px; height:112px; border-radius:16px; }
-      .hgroup h1{ font-size:24px; }
+    /* ─── FOOTER ─── */
+    .footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
     }
 
-    @media print{
-      body{ background:#fff; color:#111; }
-      header,.card{ box-shadow:none; background:#fff; border:1px solid #ddd; }
-      header::before{ display:none; }
-      a{ color:#111; border-bottom:none; }
-      .chip{ background:#eef4ff; border-color:#d7e3ff; color:#111; }
-      .proj{ background:#fafafa; border-color:#ddd; }
-      .meta span{ background:#f7f7f7; border-color:#ddd; color:#111; }
-      .btn{ display:none; }
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+
+    /* Планшет */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* Крупный телефон / небольшой планшет */
+    @media (max-width: 640px) {
+      .container { padding: 14px 12px 48px; }
+
+      header { padding: 16px; border-radius: 14px; }
+
+      .top {
+        grid-template-columns: 88px 1fr;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .photo { width: 88px; height: 88px; border-radius: 14px; }
+
+      .hgroup h1 { font-size: 19px; }
+      .role { font-size: 13px; }
+
+      .meta { gap: 6px 8px; }
+      .meta span { font-size: 12px; padding: 4px 9px; }
+
+      .cta { gap: 7px; }
+      .btn { font-size: 12px; padding: 6px 10px; }
+
+      .grid { margin-top: 14px; gap: 12px; }
+      .card { padding: 14px; border-radius: 13px; }
+
+      .jobhead { flex-direction: column; gap: 3px; }
+      .jobmeta { white-space: normal; }
+
+      .proj { padding: 10px; }
+      .proj .label { font-size: 11.5px; }
+
+      .chip { font-size: 12px; padding: 4px 9px; }
+      .chips { gap: 6px; }
+    }
+
+    /* Маленький телефон */
+    @media (max-width: 400px) {
+      .top {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+      .photo { width: 100px; height: 100px; }
+      .meta { justify-content: center; }
+      .cta { justify-content: center; }
+      .hgroup { width: 100%; }
+    }
+
+    /* ─── PRINT ─── */
+    @media print {
+      [data-theme] {
+        --bg: #fff; --text: #111; --muted: #555;
+        --card-bg: #fff; --card-bg2: #fff;
+        --header-bg: #fff; --header-bg2: #fff;
+        --proj-bg: #fafafa; --proj-bd: #ddd;
+        --chipBg: #eef4ff; --chipBd: #d7e3ff;
+        --meta-bg: #f7f7f7; --meta-bd: #ddd;
+        --line: #ddd;
+        --shadow: none; --shadow2: none;
+      }
+      header::before { display: none; }
+      a { color: #111; border-bottom: none; }
+      .btn { display: none; }
+      .theme-toggle { display: none; }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
+
+    <!-- Переключатель темы -->
+    <div class="theme-toggle">
+      <button class="theme-btn" id="themeBtn" aria-label="Переключить тему">
+        <span class="icon" id="themeIcon">☀️</span>
+        <span id="themeLabel">Светлая тема</span>
+      </button>
+    </div>
+
     <header>
       <div class="top">
         <div class="photo" aria-label="Фото">
@@ -275,10 +436,10 @@
 
         <div class="hgroup">
           <h1>Антон Гребенкин</h1>
-          <div class="role">Senior .NET / C# Developer • финтех • распределенные системы • интеграции</div>
+          <div class="role">Senior .NET / C# Developer · финтех · распределённые системы · интеграции</div>
 
           <div class="meta">
-            <span>Новосибирск • удалённо/гибрид • готов к командировкам</span>
+            <span>Новосибирск · удалённо/гибрид · готов к командировкам</span>
             <span>Опыт: 7+ лет</span>
             <span>Английский: B1</span>
             <span>Ожидания: от 350&nbsp;000 ₽ на руки</span>
@@ -296,10 +457,10 @@
       <div class="grid">
         <div class="card accent">
           <h2>О себе</h2>
-          <p>Senior .NET/C# разработчик с опытом работы в финтехе и распределенных системах. Занимаюсь проектированием и разработкой backend‑сервисов, интеграциями с внешними системами, работой с базами данных и повышением надежности и производительности решений. Есть опыт участия в проектировании архитектуры сервисов, оптимизации существующих решений и работе с микросервисной архитектурой.</p>
-<p>Регулярно участвую в проработке требований с бизнесом и аналитиками, помогаю принимать архитектурные решения, декомпозирую задачи, провожу код‑ревью, участвую в решении инцидентов и настройке CI/CD. Работаю на стыке разработки и эксплуатации и стараюсь учитывать как функциональные, так и нефункциональные требования (надежность, масштабируемость, наблюдаемость).</p>
-<p>Мне близка работа с людьми и развитие команды. Проводил групповые и индивидуальные занятия, сейчас дополнительно работаю автором курсов по .NET, помогаю разработчикам разбираться со сложными техническими и архитектурными вопросами.</p>
-<p>Прошел курс Software Architect и двигаюсь в сторону роли техлида и архитектора: углубляю знания в архитектуре распределенных и микросервисных решений, DevOps‑практиках и связанных технологиях, постепенно расширяю экспертизу во frontend‑стеке. В работе ценю прозрачные процессы, честную коммуникацию и долгосрочное качество решений, стараюсь заранее видеть технические риски и предлагать практичные варианты их снижения.</p>
+          <p>Senior .NET/C# разработчик с опытом работы в финтехе и распределённых системах. Занимаюсь проектированием и разработкой backend‑сервисов, интеграциями с внешними системами, работой с базами данных и повышением надёжности и производительности решений. Есть опыт участия в проектировании архитектуры сервисов, оптимизации существующих решений и работе с микросервисной архитектурой.</p>
+          <p>Регулярно участвую в проработке требований с бизнесом и аналитиками, помогаю принимать архитектурные решения, декомпозирую задачи, провожу код‑ревью, участвую в решении инцидентов и настройке CI/CD. Работаю на стыке разработки и эксплуатации и стараюсь учитывать как функциональные, так и нефункциональные требования (надёжность, масштабируемость, наблюдаемость).</p>
+          <p>Мне близка работа с людьми и развитие команды. Проводил групповые и индивидуальные занятия, сейчас дополнительно работаю автором курсов по .NET, помогаю разработчикам разбираться со сложными техническими и архитектурными вопросами.</p>
+          <p>Прошёл курс Software Architect и двигаюсь в сторону роли техлида и архитектора: углубляю знания в архитектуре распределённых и микросервисных решений, DevOps‑практиках и связанных технологиях, постепенно расширяю экспертизу во frontend‑стеке. В работе ценю прозрачные процессы, честную коммуникацию и долгосрочное качество решений, стараюсь заранее видеть технические риски и предлагать практичные варианты их снижения.</p>
         </div>
 
         <div class="card">
@@ -330,6 +491,7 @@
       </div>
     </header>
 
+    <!-- ОПЫТ РАБОТЫ -->
     <div class="section card">
       <h2>Опыт работы</h2>
 
@@ -338,9 +500,7 @@
           <p class="jobtitle"><strong>Fintech IQ</strong> — Senior .NET/C# разработчик</p>
           <div class="jobmeta">Февраль 2024 — настоящее время</div>
         </div>
-        <p class="muted" style="margin-top:6px;">
-          Разработка сервисов и продуктов для FinTech рынка. Высоконагруженные интеграционные контуры и сервисы коммуникаций.
-        </p>
+        <p class="muted" style="margin-top:6px;">Разработка сервисов и продуктов для FinTech рынка. Высоконагруженные интеграционные контуры и сервисы коммуникаций.</p>
 
         <div class="proj">
           <div class="label">Проекты</div>
@@ -404,11 +564,9 @@
       <div class="job">
         <div class="jobhead">
           <p class="jobtitle"><strong>Finstar Financial Group</strong> — Senior .NET/C# разработчик</p>
-          <div class="jobmeta">Декабрь 2022 — Февраль 2024 • 1 год 3 месяца</div>
+          <div class="jobmeta">Декабрь 2022 — Февраль 2024 · 1 год 3 месяца</div>
         </div>
-        <p class="muted" style="margin-top:6px;">
-          Разработка программных комплексов для международных проектов на рынке финансовых услуг.
-        </p>
+        <p class="muted" style="margin-top:6px;">Разработка программных комплексов для международных проектов на рынке финансовых услуг.</p>
 
         <div class="proj">
           <div class="label">Проект</div>
@@ -454,7 +612,7 @@
       <div class="job">
         <div class="jobhead">
           <p class="jobtitle"><strong>IT Smart Finance (АйтиСФ)</strong> — Middle .NET/C# разработчик</p>
-          <div class="jobmeta">Март 2022 — Декабрь 2022 • 10 месяцев</div>
+          <div class="jobmeta">Март 2022 — Декабрь 2022 · 10 месяцев</div>
         </div>
         <p class="muted" style="margin-top:6px;">Онлайн‑сервисы по кредитованию.</p>
 
@@ -509,7 +667,7 @@
       <div class="job">
         <div class="jobhead">
           <p class="jobtitle"><strong>ООО «Инфопуш»</strong> — Junior .NET/C# разработчик</p>
-          <div class="jobmeta">Март 2021 — Март 2022 • 1 год 1 месяц</div>
+          <div class="jobmeta">Март 2021 — Март 2022 · 1 год 1 месяц</div>
         </div>
         <p class="muted" style="margin-top:6px;">Облачный сервис программы лояльности.</p>
 
@@ -563,7 +721,7 @@
       <div class="job">
         <div class="jobhead">
           <p class="jobtitle"><strong>ООО «Информа»</strong> — техподдержка (3 линия)</p>
-          <div class="jobmeta">Декабрь 2018 — Март 2021 • 2 года 4 месяца</div>
+          <div class="jobmeta">Декабрь 2018 — Март 2021 · 2 года 4 месяца</div>
         </div>
         <p class="muted" style="margin-top:6px;">ПО для автоматизации работы компаний ЖКХ.</p>
 
@@ -575,7 +733,7 @@
             <li>Поиск и устранение ошибок в данных и базе данных, диагностика причин.</li>
             <li>Написание SQL‑запросов и хранимых процедур.</li>
             <li>Настройка обменов с внешними системами, поддержка интеграций.</li>
-            <li>Разработка отчетов с использованием FastReport и JasperReports.</li>
+            <li>Разработка отчётов с использованием FastReport и JasperReports.</li>
           </ul>
         </div>
 
@@ -587,7 +745,7 @@
         </div>
 
         <div class="proj">
-          <div class="label">Стек/инструменты</div>
+          <div class="label">Стек / инструменты</div>
           <div class="chips">
             <span class="chip">SQL</span>
             <span class="chip">FirebirdSQL</span>
@@ -600,6 +758,7 @@
       </div>
     </div>
 
+    <!-- ДОПОЛНИТЕЛЬНЫЕ ПРОЕКТЫ -->
     <div class="section card accent">
       <h2>Дополнительные проекты</h2>
 
@@ -609,7 +768,7 @@
           <div class="jobmeta">Декабрь 2025 — настоящее время</div>
         </div>
         <ul>
-          <li>Разрабатываю учебные материалы для курсов по .NET</li>
+          <li>Разрабатываю учебные материалы для курсов по .NET.</li>
         </ul>
       </div>
 
@@ -625,6 +784,7 @@
       </div>
     </div>
 
+    <!-- СЕРТИФИКАТЫ -->
     <div class="section card">
       <h2>Сертификаты</h2>
       <ul>
@@ -635,6 +795,7 @@
       </ul>
     </div>
 
+    <!-- ОБРАЗОВАНИЕ -->
     <div class="section card">
       <h2>Образование и курсы</h2>
       <ul>
@@ -643,9 +804,35 @@
       </ul>
     </div>
 
-    <div class="footer">
-      Обновлено: февраль 2026
-    </div>
+    <div class="footer">Обновлено: февраль 2026</div>
   </div>
+
+  <script>
+    const html = document.documentElement;
+    const btn  = document.getElementById('themeBtn');
+    const icon = document.getElementById('themeIcon');
+    const lbl  = document.getElementById('themeLabel');
+
+    // Восстановить сохранённую тему
+    const saved = localStorage.getItem('resume-theme');
+    if (saved) applyTheme(saved);
+
+    btn.addEventListener('click', () => {
+      const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('resume-theme', next);
+    });
+
+    function applyTheme(theme) {
+      html.dataset.theme = theme;
+      if (theme === 'light') {
+        icon.textContent = '🌙';
+        lbl.textContent  = 'Тёмная тема';
+      } else {
+        icon.textContent = '☀️';
+        lbl.textContent  = 'Светлая тема';
+      }
+    }
+  </script>
 </body>
 </html>
