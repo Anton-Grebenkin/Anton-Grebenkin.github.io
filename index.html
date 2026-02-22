@@ -695,10 +695,6 @@
 
   function setVersion(v) {
     // Обновить URL без перезагрузки
-    const url = new URL(location.href);
-    url.searchParams.set('v', v);
-    history.replaceState(null, '', url.toString());
-
     applyVersion(v);
   }
 
@@ -745,5 +741,6 @@
 </script>
 </body>
 </html>
+
 
 
