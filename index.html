@@ -6,217 +6,163 @@
   <meta name="description" content="Резюме — Антон Гребенкин, Senior .NET/C# разработчик" />
   <title>Антон Гребенкин — Senior .NET/C# Developer</title>
   <style>
-    /* ─── ТЕМНАЯ ТЕМА (default) ─── */
+    /* ─── ТЁМНАЯ ТЕМА (default) ─── */
     :root, [data-theme="dark"] {
-      --bg: #0e1526;
-      --surface: #131d36;
-      --surface2: #101a31;
-      --header-bg: rgba(255,255,255,.055);
-      --header-bg2: rgba(255,255,255,.02);
-      --card-bg: rgba(255,255,255,.05);
-      --card-bg2: rgba(255,255,255,.02);
-      --text: #eef2ff;
-      --muted: #c2ccef;
-      --line: rgba(255,255,255,.10);
-      --brand: #2f6feb;
-      --brandGlow: rgba(47,111,235,.22);
-      --chipBg: rgba(47,111,235,.14);
-      --chipBd: rgba(47,111,235,.30);
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --shadow2: 0 8px 22px rgba(0,0,0,.28);
-      --proj-bg: rgba(16,26,49,.55);
-      --proj-bd: rgba(47,111,235,.16);
-      --meta-bg: rgba(15,23,51,.45);
-      --meta-bd: rgba(47,111,235,.18);
-      --btn-bg: rgba(47,111,235,.12);
-      --btn-bd: rgba(47,111,235,.26);
-      --btn-bg-h: rgba(47,111,235,.16);
-      --btn-bd-h: rgba(47,111,235,.45);
-      --accent-g1: rgba(47,111,235,.16);
-      --accent-g2: rgba(56,189,248,.10);
-      --accent-g3: rgba(47,111,235,.30);
-      --accent-g4: rgba(56,189,248,.12);
-      --toggle-bg: rgba(47,111,235,.18);
-      --toggle-bd: rgba(47,111,235,.35);
+      --bg: #0e1526; --surface: #131d36; --surface2: #101a31;
+      --header-bg: rgba(255,255,255,.055); --header-bg2: rgba(255,255,255,.02);
+      --card-bg: rgba(255,255,255,.05); --card-bg2: rgba(255,255,255,.02);
+      --text: #eef2ff; --muted: #c2ccef; --line: rgba(255,255,255,.10);
+      --brand: #2f6feb; --brandGlow: rgba(47,111,235,.22);
+      --chipBg: rgba(47,111,235,.14); --chipBd: rgba(47,111,235,.30);
+      --shadow: 0 10px 30px rgba(0,0,0,.35); --shadow2: 0 8px 22px rgba(0,0,0,.28);
+      --proj-bg: rgba(16,26,49,.55); --proj-bd: rgba(47,111,235,.16);
+      --meta-bg: rgba(15,23,51,.45); --meta-bd: rgba(47,111,235,.18);
+      --btn-bg: rgba(47,111,235,.12); --btn-bd: rgba(47,111,235,.26);
+      --btn-bg-h: rgba(47,111,235,.16); --btn-bd-h: rgba(47,111,235,.45);
+      --accent-g1: rgba(47,111,235,.16); --accent-g2: rgba(56,189,248,.10);
+      --accent-g3: rgba(47,111,235,.30); --accent-g4: rgba(56,189,248,.12);
+      --toggle-bg: rgba(47,111,235,.18); --toggle-bd: rgba(47,111,235,.35);
       --toggle-color: #c2ccef;
+      --vbtn-bg: rgba(47,111,235,.18); --vbtn-bd: rgba(47,111,235,.45);
+      --vbtn-bg-off: rgba(47,111,235,.07); --vbtn-bd-off: rgba(47,111,235,.22);
     }
-
     /* ─── СВЕТЛАЯ ТЕМА ─── */
     [data-theme="light"] {
-      --bg: #f0f4ff;
-      --surface: #ffffff;
-      --surface2: #e8eeff;
-      --header-bg: rgba(255,255,255,.85);
-      --header-bg2: rgba(255,255,255,.60);
-      --card-bg: rgba(255,255,255,.95);
-      --card-bg2: rgba(240,244,255,.80);
-      --text: #0f1b3d;
-      --muted: #4a5980;
-      --line: rgba(0,0,0,.10);
-      --brand: #1a56cc;
-      --brandGlow: rgba(26,86,204,.18);
-      --chipBg: rgba(26,86,204,.08);
-      --chipBd: rgba(26,86,204,.22);
-      --shadow: 0 10px 30px rgba(0,0,0,.10);
-      --shadow2: 0 8px 22px rgba(0,0,0,.08);
-      --proj-bg: rgba(230,238,255,.65);
-      --proj-bd: rgba(26,86,204,.18);
-      --meta-bg: rgba(220,230,255,.60);
-      --meta-bd: rgba(26,86,204,.20);
-      --btn-bg: rgba(26,86,204,.09);
-      --btn-bd: rgba(26,86,204,.25);
-      --btn-bg-h: rgba(26,86,204,.15);
-      --btn-bd-h: rgba(26,86,204,.45);
-      --accent-g1: rgba(26,86,204,.10);
-      --accent-g2: rgba(56,189,248,.07);
-      --accent-g3: rgba(26,86,204,.18);
-      --accent-g4: rgba(56,189,248,.09);
-      --toggle-bg: rgba(26,86,204,.10);
-      --toggle-bd: rgba(26,86,204,.28);
+      --bg: #f0f4ff; --surface: #ffffff; --surface2: #e8eeff;
+      --header-bg: rgba(255,255,255,.85); --header-bg2: rgba(255,255,255,.60);
+      --card-bg: rgba(255,255,255,.95); --card-bg2: rgba(240,244,255,.80);
+      --text: #0f1b3d; --muted: #4a5980; --line: rgba(0,0,0,.10);
+      --brand: #1a56cc; --brandGlow: rgba(26,86,204,.18);
+      --chipBg: rgba(26,86,204,.08); --chipBd: rgba(26,86,204,.22);
+      --shadow: 0 10px 30px rgba(0,0,0,.10); --shadow2: 0 8px 22px rgba(0,0,0,.08);
+      --proj-bg: rgba(230,238,255,.65); --proj-bd: rgba(26,86,204,.18);
+      --meta-bg: rgba(220,230,255,.60); --meta-bd: rgba(26,86,204,.20);
+      --btn-bg: rgba(26,86,204,.09); --btn-bd: rgba(26,86,204,.25);
+      --btn-bg-h: rgba(26,86,204,.15); --btn-bd-h: rgba(26,86,204,.45);
+      --accent-g1: rgba(26,86,204,.10); --accent-g2: rgba(56,189,248,.07);
+      --accent-g3: rgba(26,86,204,.18); --accent-g4: rgba(56,189,248,.09);
+      --toggle-bg: rgba(26,86,204,.10); --toggle-bd: rgba(26,86,204,.28);
       --toggle-color: #1a56cc;
+      --vbtn-bg: rgba(26,86,204,.18); --vbtn-bd: rgba(26,86,204,.50);
+      --vbtn-bg-off: rgba(26,86,204,.06); --vbtn-bd-off: rgba(26,86,204,.20);
     }
 
-    /* ─── RESET & BASE ─── */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
       margin: 0;
       font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue";
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.55;
+      background: var(--bg); color: var(--text); line-height: 1.55;
       transition: background .25s, color .25s;
     }
-
-    a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid color-mix(in srgb, var(--brand) 55%, transparent);
-    }
+    a { color: var(--text); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--brand) 55%, transparent); }
     a:hover { border-bottom-color: var(--brand); }
 
-    /* ─── LAYOUT ─── */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 16px 64px;
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+
+    /* ─── ПАНЕЛЬ УПРАВЛЕНИЯ (тема + версия) ─── */
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    /* ─── THEME TOGGLE ─── */
-    .theme-toggle {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 12px;
-    }
-    .theme-btn {
+    /* Переключатель версии — сегментированный */
+    .version-switch {
       display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 14px;
       border-radius: 999px;
-      border: 1px solid var(--toggle-bd);
-      background: var(--toggle-bg);
-      color: var(--toggle-color);
+      border: 1px solid var(--vbtn-bd-off);
+      overflow: hidden;
+      background: var(--vbtn-bg-off);
+    }
+    .version-switch button {
+      padding: 7px 16px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
       font-size: 13px;
-      cursor: pointer;
-      transition: background .2s, border-color .2s, color .2s;
       font-family: inherit;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      border-radius: 0;
+      white-space: nowrap;
     }
-    .theme-btn:hover {
-      background: var(--btn-bg-h);
-      border-color: var(--btn-bd-h);
+    .version-switch button.active {
+      background: var(--vbtn-bg);
+      color: var(--text);
+      font-weight: 600;
+      border-radius: 999px;
     }
+    .version-switch button:hover:not(.active) { background: var(--btn-bg); color: var(--text); }
+
+    .version-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-left: 8px;
+      align-self: center;
+    }
+
+    .theme-toggle { display: flex; }
+    .theme-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 14px; border-radius: 999px;
+      border: 1px solid var(--toggle-bd); background: var(--toggle-bg);
+      color: var(--toggle-color); font-size: 13px; cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s; font-family: inherit;
+    }
+    .theme-btn:hover { background: var(--btn-bg-h); border-color: var(--btn-bd-h); }
     .theme-btn .icon { font-size: 15px; line-height: 1; }
 
     /* ─── HEADER ─── */
     header {
-      position: relative;
-      overflow: hidden;
-      border-radius: 18px;
-      border: 1px solid var(--line);
+      position: relative; overflow: hidden;
+      border-radius: 18px; border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--header-bg), var(--header-bg2));
-      box-shadow: var(--shadow);
-      padding: 20px;
+      box-shadow: var(--shadow); padding: 20px;
       transition: background .25s, border-color .25s;
     }
     header::before {
-      content: "";
-      position: absolute;
-      inset: -2px -2px auto -2px;
-      height: 150px;
+      content: ""; position: absolute; inset: -2px -2px auto -2px; height: 150px;
       background:
         radial-gradient(900px 240px at 20% 10%, var(--accent-g3), transparent 60%),
         radial-gradient(900px 240px at 85% 15%, var(--accent-g4), transparent 60%),
         linear-gradient(90deg, var(--accent-g1), var(--accent-g2));
-      opacity: .9;
-      pointer-events: none;
-      transition: opacity .25s;
+      opacity: .9; pointer-events: none; transition: opacity .25s;
     }
     header > * { position: relative; }
 
-    /* ─── TOP (photo + hgroup) ─── */
     .top {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 18px;
-      align-items: center;
+      display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center;
     }
-
     .photo {
-      width: 150px; height: 150px;
-      border-radius: 20px;
+      width: 150px; height: 150px; border-radius: 20px;
       border: 1px solid color-mix(in srgb, var(--brand) 32%, transparent);
-      overflow: hidden;
-      background: rgba(127,127,127,.08);
-      box-shadow: var(--shadow2);
-      flex-shrink: 0;
+      overflow: hidden; background: rgba(127,127,127,.08); box-shadow: var(--shadow2); flex-shrink: 0;
     }
     .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-    .hgroup h1 {
-      margin: 0;
-      font-size: clamp(20px, 3.5vw, 30px);
-      letter-spacing: .2px;
-    }
-    .role {
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: clamp(13px, 2vw, 15.5px);
-      line-height: 1.45;
-    }
-
+    .hgroup h1 { margin: 0; font-size: clamp(20px, 3.5vw, 30px); letter-spacing: .2px; }
+    .role { margin-top: 6px; color: var(--muted); font-size: clamp(13px, 2vw, 15.5px); line-height: 1.45; }
     .meta {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 10px;
-      color: var(--muted);
-      font-size: 13px;
+      margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 10px;
+      color: var(--muted); font-size: 13px;
     }
     .meta span {
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: var(--meta-bg);
-      border: 1px solid var(--meta-bd);
-      backdrop-filter: blur(6px);
-      transition: background .25s, border-color .25s;
+      padding: 5px 10px; border-radius: 999px;
+      background: var(--meta-bg); border: 1px solid var(--meta-bd);
+      backdrop-filter: blur(6px); transition: background .25s, border-color .25s;
     }
 
     /* ─── GRID (about + skills) ─── */
-    .grid {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 16px;
-    }
+    .grid { margin-top: 18px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
 
     /* ─── CARDS ─── */
     .card {
-      border-radius: 16px;
-      border: 1px solid var(--line);
+      border-radius: 16px; border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--card-bg), var(--card-bg2));
-      box-shadow: var(--shadow2);
-      padding: 18px;
+      box-shadow: var(--shadow2); padding: 18px;
       transition: background .25s, border-color .25s;
     }
     .card.accent {
@@ -226,178 +172,113 @@
         radial-gradient(900px 260px at 92% 20%, var(--accent-g2), transparent 55%),
         linear-gradient(180deg, var(--card-bg), var(--card-bg2));
     }
-
     h2 {
-      margin: 0 0 10px;
-      font-size: 12.5px;
-      letter-spacing: .6px;
-      text-transform: uppercase;
-      color: var(--text);
-      opacity: .88;
+      margin: 0 0 10px; font-size: 12.5px; letter-spacing: .6px;
+      text-transform: uppercase; color: var(--text); opacity: .88;
     }
-
     p { margin: 10px 0; color: var(--text); }
     .muted { color: var(--muted); }
-
     ul { margin: 10px 0 0 18px; padding: 0; }
     li { margin: 6px 0; color: var(--text); }
 
     /* ─── CHIPS ─── */
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 10px;
-    }
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
     .chip {
-      border: 1px solid var(--chipBd);
-      background: var(--chipBg);
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 12.5px;
-      color: var(--text);
+      border: 1px solid var(--chipBd); background: var(--chipBg);
+      padding: 5px 10px; border-radius: 999px; font-size: 12.5px; color: var(--text);
       transition: background .25s, border-color .25s;
     }
 
     /* ─── SECTIONS ─── */
     .section { margin-top: 16px; }
-
-    .job {
-      border-top: 1px solid var(--line);
-      padding-top: 14px;
-      margin-top: 14px;
-    }
+    .job { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 14px; }
     .job:first-child { border-top: none; padding-top: 0; margin-top: 0; }
-
     .jobhead {
-      display: flex;
-      gap: 10px;
-      align-items: baseline;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: flex; gap: 10px; align-items: baseline;
+      justify-content: space-between; flex-wrap: wrap;
     }
     .jobtitle { font-size: 15.5px; margin: 0; }
     .jobmeta { color: var(--muted); font-size: 13px; white-space: nowrap; }
-
-    /* ─── PROJECT BLOCKS ─── */
     .proj {
-      margin-top: 10px;
-      padding: 12px;
-      border-radius: 14px;
-      background: var(--proj-bg);
-      border: 1px solid var(--proj-bd);
+      margin-top: 10px; padding: 12px; border-radius: 14px;
+      background: var(--proj-bg); border: 1px solid var(--proj-bd);
       transition: background .25s, border-color .25s;
     }
     .proj .label {
-      font-size: 12px;
-      letter-spacing: .35px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 12px; letter-spacing: .35px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
     }
     .proj .label::before {
-      content: "";
-      width: 10px; height: 10px;
-      border-radius: 3px;
+      content: ""; width: 10px; height: 10px; border-radius: 3px;
       background: linear-gradient(135deg, var(--brand), rgba(56,189,248,.75));
-      box-shadow: 0 0 0 3px var(--brandGlow);
-      flex: 0 0 auto;
+      box-shadow: 0 0 0 3px var(--brandGlow); flex: 0 0 auto;
     }
 
-    /* ─── CTA BUTTONS ─── */
-    .cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
+    /* ─── CTA ─── */
+    .cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 12px;
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 12px; border-radius: 999px;
+      border: 1px solid var(--btn-bd); background: var(--btn-bg); color: var(--text);
+      font-size: 13px; box-shadow: var(--shadow2); transition: background .2s, border-color .2s;
+    }
+    .btn:hover { border-color: var(--btn-bd-h); background: var(--btn-bg-h); }
+
+    /* ─── BADGE «короткая версия» ─── */
+    .short-badge {
+      display: none;
+      font-size: 11.5px;
+      color: var(--brand);
+      background: var(--chipBg);
+      border: 1px solid var(--chipBd);
       border-radius: 999px;
-      border: 1px solid var(--btn-bd);
-      background: var(--btn-bg);
-      color: var(--text);
-      font-size: 13px;
-      box-shadow: var(--shadow2);
-      transition: background .2s, border-color .2s;
+      padding: 3px 10px;
+      margin-left: 8px;
+      vertical-align: middle;
     }
-    .btn:hover {
-      border-color: var(--btn-bd-h);
-      background: var(--btn-bg-h);
-    }
+    body.short-view .short-badge { display: inline; }
+
+    /* ─── КОРОТКАЯ ВЕРСИЯ: что скрываем ─── */
+    body.short-view .long-only { display: none !important; }
+    /* В короткой версии «О себе» показываем только первый абзац */
+    body.short-view .about-full { display: none !important; }
+    body.short-view .about-short { display: block !important; }
+    .about-short { display: none; }
 
     /* ─── FOOTER ─── */
-    .footer {
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
+    .footer { margin-top: 20px; color: var(--muted); font-size: 13px; text-align: center; }
 
-    /* ═══════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════ */
-
-    /* Планшет */
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-
-    /* Крупный телефон / небольшой планшет */
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
     @media (max-width: 640px) {
       .container { padding: 14px 12px 48px; }
-
       header { padding: 16px; border-radius: 14px; }
-
-      .top {
-        grid-template-columns: 88px 1fr;
-        gap: 14px;
-        align-items: flex-start;
-      }
+      .top { grid-template-columns: 88px 1fr; gap: 14px; align-items: flex-start; }
       .photo { width: 88px; height: 88px; border-radius: 14px; }
-
       .hgroup h1 { font-size: 19px; }
       .role { font-size: 13px; }
-
       .meta { gap: 6px 8px; }
       .meta span { font-size: 12px; padding: 4px 9px; }
-
       .cta { gap: 7px; }
       .btn { font-size: 12px; padding: 6px 10px; }
-
       .grid { margin-top: 14px; gap: 12px; }
       .card { padding: 14px; border-radius: 13px; }
-
       .jobhead { flex-direction: column; gap: 3px; }
       .jobmeta { white-space: normal; }
-
       .proj { padding: 10px; }
       .proj .label { font-size: 11.5px; }
-
       .chip { font-size: 12px; padding: 4px 9px; }
       .chips { gap: 6px; }
+      .controls { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .version-switch button { padding: 6px 12px; }
     }
-
-    /* Маленький телефон */
     @media (max-width: 400px) {
-      .top {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-      }
+      .top { grid-template-columns: 1fr; justify-items: center; text-align: center; }
       .photo { width: 100px; height: 100px; }
       .meta { justify-content: center; }
       .cta { justify-content: center; }
       .hgroup { width: 100%; }
     }
-
-    /* ─── PRINT ─── */
     @media print {
       [data-theme] {
         --bg: #fff; --text: #111; --muted: #555;
@@ -406,19 +287,29 @@
         --proj-bg: #fafafa; --proj-bd: #ddd;
         --chipBg: #eef4ff; --chipBd: #d7e3ff;
         --meta-bg: #f7f7f7; --meta-bd: #ddd;
-        --line: #ddd;
-        --shadow: none; --shadow2: none;
+        --line: #ddd; --shadow: none; --shadow2: none;
       }
       header::before { display: none; }
       a { color: #111; border-bottom: none; }
       .btn { display: none; }
-      .theme-toggle { display: none; }
+      .controls { display: none; }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
+
+  <!-- ─── ПАНЕЛЬ УПРАВЛЕНИЯ ─── -->
+  <div class="controls">
+    <!-- Переключатель версии -->
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+      <div class="version-switch" role="group" aria-label="Версия резюме">
+        <button id="btnFull"  onclick="setVersion('full')"  class="active">📄 Полная версия</button>
+        <button id="btnShort" onclick="setVersion('short')">⚡ Краткая для HR</button>
+      </div>
+      <span class="version-label" id="versionHint">Все детали и обязанности</span>
+    </div>
 
     <!-- Переключатель темы -->
     <div class="theme-toggle">
@@ -427,412 +318,431 @@
         <span id="themeLabel">Светлая тема</span>
       </button>
     </div>
+  </div>
 
-    <header>
-      <div class="top">
-        <div class="photo" aria-label="Фото">
-          <img src="https://img.hhcdn.ru/photo/745699972.jpeg?t=1771832491&h=C3ww0ykqcOdJ_kEGlGImUw" alt="Антон Гребенкин" />
+  <!-- ─── HEADER ─── -->
+  <header>
+    <div class="top">
+      <div class="photo" aria-label="Фото">
+        <img src="https://img.hhcdn.ru/photo/745699972.jpeg?t=1771832491&h=C3ww0ykqcOdJ_kEGlGImUw" alt="Антон Гребенкин" />
+      </div>
+      <div class="hgroup">
+        <h1>Антон Гребенкин <span class="short-badge">краткое резюме</span></h1>
+        <div class="role">Senior .NET / C# Developer · финтех · распределённые системы · интеграции</div>
+        <div class="meta">
+          <span>Новосибирск · удалённо/гибрид · готов к командировкам</span>
+          <span>Опыт: 7+ лет</span>
+          <span>Английский: B1</span>
+          <span>Ожидания: от 350&nbsp;000 ₽ на руки</span>
         </div>
-
-        <div class="hgroup">
-          <h1>Антон Гребенкин</h1>
-          <div class="role">Senior .NET / C# Developer · финтех · распределённые системы · интеграции</div>
-
-          <div class="meta">
-            <span>Новосибирск · удалённо/гибрид · готов к командировкам</span>
-            <span>Опыт: 7+ лет</span>
-            <span>Английский: B1</span>
-            <span>Ожидания: от 350&nbsp;000 ₽ на руки</span>
-          </div>
-
-          <div class="cta" aria-label="Быстрые ссылки">
-            <a class="btn" href="mailto:grebenkin.anton.97@gmail.com">grebenkin.anton.97@gmail.com</a>
-            <a class="btn" href="tel:+79529475374">+7&nbsp;952&nbsp;947‑53‑74</a>
-            <a class="btn" href="https://github.com/Anton-Grebenkin" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn" href="https://career.habr.com/grebenkinanton" target="_blank" rel="noreferrer">Хабр Карьера</a>
-          </div>
+        <div class="cta" aria-label="Быстрые ссылки">
+          <a class="btn" href="mailto:grebenkin.anton.97@gmail.com">grebenkin.anton.97@gmail.com</a>
+          <a class="btn" href="tel:+79529475374">+7&nbsp;952&nbsp;947‑53‑74</a>
+          <a class="btn" href="https://github.com/Anton-Grebenkin" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://career.habr.com/grebenkinanton" target="_blank" rel="noreferrer">Хабр Карьера</a>
         </div>
       </div>
+    </div>
 
-      <div class="grid">
-        <div class="card accent">
-          <h2>О себе</h2>
+    <div class="grid">
+      <div class="card accent">
+        <h2>О себе</h2>
+
+        <!-- Короткая версия «О себе» -->
+        <p class="about-short">
+          Senior .NET/C# разработчик, 7+ лет опыта. Финтех, распределённые системы, высоконагруженные интеграции. Проектирую backend‑сервисы, работаю с микросервисной архитектурой, провожу код‑ревью, менторю команду. Двигаюсь в сторону техлида/архитектора (OTUS Software Architect, 2025). Автор курсов по .NET в Яндекс Практикуме.
+        </p>
+
+        <!-- Полная версия «О себе» -->
+        <div class="about-full">
           <p>Senior .NET/C# разработчик с опытом работы в финтехе и распределённых системах. Занимаюсь проектированием и разработкой backend‑сервисов, интеграциями с внешними системами, работой с базами данных и повышением надёжности и производительности решений. Есть опыт участия в проектировании архитектуры сервисов, оптимизации существующих решений и работе с микросервисной архитектурой.</p>
           <p>Регулярно участвую в проработке требований с бизнесом и аналитиками, помогаю принимать архитектурные решения, декомпозирую задачи, провожу код‑ревью, участвую в решении инцидентов и настройке CI/CD. Работаю на стыке разработки и эксплуатации и стараюсь учитывать как функциональные, так и нефункциональные требования (надёжность, масштабируемость, наблюдаемость).</p>
           <p>Мне близка работа с людьми и развитие команды. Проводил групповые и индивидуальные занятия, сейчас дополнительно работаю автором курсов по .NET, помогаю разработчикам разбираться со сложными техническими и архитектурными вопросами.</p>
           <p>Прошёл курс Software Architect и двигаюсь в сторону роли техлида и архитектора: углубляю знания в архитектуре распределённых и микросервисных решений, DevOps‑практиках и связанных технологиях, постепенно расширяю экспертизу во frontend‑стеке. В работе ценю прозрачные процессы, честную коммуникацию и долгосрочное качество решений, стараюсь заранее видеть технические риски и предлагать практичные варианты их снижения.</p>
         </div>
-
-        <div class="card">
-          <h2>Ключевые навыки</h2>
-          <div class="chips" aria-label="Навыки">
-            <span class="chip">C#</span>
-            <span class="chip">.NET 6/7/8</span>
-            <span class="chip">ASP.NET Core Web API</span>
-            <span class="chip">EF / EF Core</span>
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">MS SQL Server</span>
-            <span class="chip">MongoDB</span>
-            <span class="chip">Redis</span>
-            <span class="chip">RabbitMQ</span>
-            <span class="chip">Kafka</span>
-            <span class="chip">ClickHouse</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Kubernetes</span>
-            <span class="chip">CI/CD</span>
-            <span class="chip">Prometheus</span>
-            <span class="chip">Grafana</span>
-            <span class="chip">Clean Architecture</span>
-            <span class="chip">SOLID</span>
-            <span class="chip">Паттерны проектирования</span>
-            <span class="chip">Code Review</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- ОПЫТ РАБОТЫ -->
-    <div class="section card">
-      <h2>Опыт работы</h2>
-
-      <div class="job">
-        <div class="jobhead">
-          <p class="jobtitle"><strong>Fintech IQ</strong> — Senior .NET/C# разработчик</p>
-          <div class="jobmeta">Февраль 2024 — настоящее время</div>
-        </div>
-        <p class="muted" style="margin-top:6px;">Разработка сервисов и продуктов для FinTech рынка. Высоконагруженные интеграционные контуры и сервисы коммуникаций.</p>
-
-        <div class="proj">
-          <div class="label">Проекты</div>
-          <ul>
-            <li><strong>Платёжные сервисы</strong></li>
-            <li><strong>Сервисы уведомлений</strong> (SMS, Email, Push, WhatsApp)</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Обязанности</div>
-          <ul>
-            <li>Проработка требований и формализация постановок задач совместно с бизнесом и аналитиками.</li>
-            <li>Проектирование архитектуры сервисов и интеграций: контракты, потоки данных, схемы взаимодействия, ошибки и повторные попытки.</li>
-            <li>Разработка и поддержка интеграций со сторонними сервисами (HTTP/gRPC), сопровождение в проде.</li>
-            <li>Покрытие кода юнит‑ и интеграционными тестами, поддержка тестовой инфраструктуры.</li>
-            <li>Код‑ревью, повышение качества кода и единообразия решений в команде.</li>
-            <li>Онбординг и менторство новых сотрудников, помощь в разборе домена и архитектуры.</li>
-            <li>Участие в решении инцидентов: анализ причин, стабилизация, пост‑инцидентные улучшения.</li>
-            <li>Настройка и развитие CI/CD (сборка, тесты, релизные пайплайны), участие в улучшении процессов поставки.</li>
-            <li>Улучшение наблюдаемости: метрики, алерты, дашборды, технические логи и трассировка.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Достижения</div>
-          <ul>
-            <li>Реализовал интеграции с SMS/WhatsApp‑провайдерами для разных стран.</li>
-            <li>Повысил доставляемость: fallback‑отправка через альтернативного провайдера, retry‑политики, DLQ для проблемных сообщений.</li>
-            <li>Исправил критичный распределённый баг в SMS‑контуре; повысилась стабильность под нагрузкой.</li>
-            <li>Перевёл сервисы на stateless‑архитектуру, обеспечив горизонтальное масштабирование.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Стек</div>
-          <div class="chips">
-            <span class="chip">.NET 7/8</span>
-            <span class="chip">ASP.NET Core Web API</span>
-            <span class="chip">Blazor</span>
-            <span class="chip">gRPC</span>
-            <span class="chip">HTTP</span>
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">MongoDB</span>
-            <span class="chip">Redis</span>
-            <span class="chip">RabbitMQ</span>
-            <span class="chip">Kafka</span>
-            <span class="chip">ClickHouse</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Kubernetes</span>
-            <span class="chip">Prometheus</span>
-            <span class="chip">Grafana</span>
-            <span class="chip">GitLab CI/CD</span>
-            <span class="chip">Jira</span>
-            <span class="chip">Confluence</span>
-            <span class="chip">Git</span>
-          </div>
-        </div>
       </div>
 
-      <div class="job">
-        <div class="jobhead">
-          <p class="jobtitle"><strong>Finstar Financial Group</strong> — Senior .NET/C# разработчик</p>
-          <div class="jobmeta">Декабрь 2022 — Февраль 2024 · 1 год 3 месяца</div>
-        </div>
-        <p class="muted" style="margin-top:6px;">Разработка программных комплексов для международных проектов на рынке финансовых услуг.</p>
-
-        <div class="proj">
-          <div class="label">Проект</div>
-          <ul><li><strong>Кредитный конвейер / сервис подачи заявки на кредит</strong></li></ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Обязанности</div>
-          <ul>
-            <li>Проработка задач с менеджерами и аналитиками: уточнение требований, согласование решений, декомпозиция.</li>
-            <li>Поддержка и разработка нового функционала в сервисе подачи заявки на кредит.</li>
-            <li>Рефакторинг и повышение поддерживаемости кода, участие в улучшении архитектурных решений.</li>
-            <li>Код‑ревью, сопровождение задач до прома, участие в разборе дефектов и инцидентов.</li>
-            <li>Оптимизация работы БД: анализ узких мест, оптимизация запросов и схем, перенос части логики на уровень приложения.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Достижения</div>
-          <ul>
-            <li>Миграция сервиса с <strong>.NET Framework 4.7.2 на .NET 6</strong>.</li>
-            <li>Доработки под нового заказчика без потери совместимости.</li>
-            <li>Оптимизация БД и критичных запросов; частичный перенос бизнес‑логики из БД в приложение.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Стек</div>
-          <div class="chips">
-            <span class="chip">.NET 6</span>
-            <span class="chip">.NET Framework 4.7.2</span>
-            <span class="chip">ASP.NET</span>
-            <span class="chip">ASP.NET Core Web API</span>
-            <span class="chip">MS SQL</span>
-            <span class="chip">GitLab</span>
-            <span class="chip">Jira</span>
-            <span class="chip">Confluence</span>
-            <span class="chip">Git</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="job">
-        <div class="jobhead">
-          <p class="jobtitle"><strong>IT Smart Finance (АйтиСФ)</strong> — Middle .NET/C# разработчик</p>
-          <div class="jobmeta">Март 2022 — Декабрь 2022 · 10 месяцев</div>
-        </div>
-        <p class="muted" style="margin-top:6px;">Онлайн‑сервисы по кредитованию.</p>
-
-        <div class="proj">
-          <div class="label">Проект</div>
-          <ul><li><strong>Внутренняя CRM система</strong></li></ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Обязанности</div>
-          <ul>
-            <li>Поддержка и развитие внутренней CRM системы компании.</li>
-            <li>Проработка требований с бизнесом и менеджерами, формирование постановок и оценок.</li>
-            <li>Разработка и внедрение нового функционала, сопровождение релизов.</li>
-            <li>Разбор и решение инцидентов по обращениям пользователей и технической поддержки.</li>
-            <li>Код‑ревью, улучшение качества решений и согласованности подходов.</li>
-            <li>Менторство и помощь коллегам по сложным задачам.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Достижения</div>
-          <ul>
-            <li>В короткие сроки разгрузил бэклог с большим количеством задач на проекте; ускорил выпуск изменений.</li>
-            <li>Улучшения для Андеррайтинга: сокращение времени обработки заявок и рост производительности.</li>
-            <li>Оптимизация БД: снижение нагрузки примерно с <strong>90% до 30%</strong>.</li>
-            <li>Новый алгоритм поиска и отправки данных во внешнюю систему.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Стек</div>
-          <div class="chips">
-            <span class="chip">.NET Core 2.2</span>
-            <span class="chip">.NET 6</span>
-            <span class="chip">ASP.NET Core MVC</span>
-            <span class="chip">ASP.NET Core Web API</span>
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">jQuery</span>
-            <span class="chip">DevExtreme</span>
-            <span class="chip">GitLab</span>
-            <span class="chip">Jira</span>
-            <span class="chip">Confluence</span>
-            <span class="chip">Git</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="job">
-        <div class="jobhead">
-          <p class="jobtitle"><strong>ООО «Инфопуш»</strong> — Junior .NET/C# разработчик</p>
-          <div class="jobmeta">Март 2021 — Март 2022 · 1 год 1 месяц</div>
-        </div>
-        <p class="muted" style="margin-top:6px;">Облачный сервис программы лояльности.</p>
-
-        <div class="proj">
-          <div class="label">Проекты</div>
-          <ul>
-            <li>Сервис для карт <strong>Apple Wallet</strong></li>
-            <li>Сервис отправки <strong>Webhook</strong></li>
-            <li>Интеграции с кассовым оборудованием</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Обязанности</div>
-          <ul>
-            <li>Сбор и уточнение требований от клиентов и менеджеров для разработки нового функционала.</li>
-            <li>Консультация клиентов по работе сервиса и интеграциям.</li>
-            <li>Поддержка и устранение ошибок, улучшение стабильности.</li>
-            <li>Разработка и сопровождение сервисов и API, участие в релизах.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Достижения</div>
-          <ul>
-            <li>Переписал внутренний API с <strong>.NET Framework 4.7.2 на .NET 5</strong>.</li>
-            <li>Разработал сервис для отправки Webhook‑ов клиентам.</li>
-            <li>Разработал сервис управления электронными картами лояльности для Apple Wallet и WalletPasses (Android).</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Стек</div>
-          <div class="chips">
-            <span class="chip">.NET 5</span>
-            <span class="chip">.NET Framework 4.7.2</span>
-            <span class="chip">WebForms</span>
-            <span class="chip">ASP.NET Core Web API</span>
-            <span class="chip">MS SQL</span>
-            <span class="chip">RabbitMQ</span>
-            <span class="chip">ClickHouse</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">jQuery</span>
-            <span class="chip">SVN</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="job">
-        <div class="jobhead">
-          <p class="jobtitle"><strong>ООО «Информа»</strong> — техподдержка (3 линия)</p>
-          <div class="jobmeta">Декабрь 2018 — Март 2021 · 2 года 4 месяца</div>
-        </div>
-        <p class="muted" style="margin-top:6px;">ПО для автоматизации работы компаний ЖКХ.</p>
-
-        <div class="proj">
-          <div class="label">Обязанности</div>
-          <ul>
-            <li>Консультация клиентов по возникающим вопросам, помощь в настройке и работе ПО.</li>
-            <li>Постановка задач на разработку со слов заказчика, воспроизведение проблем и сбор контекста.</li>
-            <li>Поиск и устранение ошибок в данных и базе данных, диагностика причин.</li>
-            <li>Написание SQL‑запросов и хранимых процедур.</li>
-            <li>Настройка обменов с внешними системами, поддержка интеграций.</li>
-            <li>Разработка отчётов с использованием FastReport и JasperReports.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Достижения</div>
-          <ul>
-            <li>Разработал утилиту на <strong>C# WinForms</strong> для автоматизации загрузки, обработки и выгрузки файлов dbf, что исключило ручную работу технической поддержки в БД и повысило скорость обслуживания клиентов.</li>
-          </ul>
-        </div>
-
-        <div class="proj">
-          <div class="label">Стек / инструменты</div>
-          <div class="chips">
-            <span class="chip">SQL</span>
-            <span class="chip">FirebirdSQL</span>
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">FastReport</span>
-            <span class="chip">JasperReports</span>
-            <span class="chip">Jira</span>
-          </div>
+      <div class="card">
+        <h2>Ключевые навыки</h2>
+        <div class="chips" aria-label="Навыки">
+          <span class="chip">C#</span><span class="chip">.NET 6/7/8</span>
+          <span class="chip">ASP.NET Core Web API</span><span class="chip">EF / EF Core</span>
+          <span class="chip">PostgreSQL</span><span class="chip">MS SQL Server</span>
+          <span class="chip">MongoDB</span><span class="chip">Redis</span>
+          <span class="chip">RabbitMQ</span><span class="chip">Kafka</span>
+          <span class="chip">ClickHouse</span><span class="chip">Docker</span>
+          <span class="chip">Kubernetes</span><span class="chip">CI/CD</span>
+          <span class="chip">Prometheus</span><span class="chip">Grafana</span>
+          <span class="chip">Clean Architecture</span><span class="chip">SOLID</span>
+          <span class="chip">Паттерны проектирования</span><span class="chip">Code Review</span>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- ДОПОЛНИТЕЛЬНЫЕ ПРОЕКТЫ -->
-    <div class="section card accent">
-      <h2>Дополнительные проекты</h2>
+  <!-- ─── ОПЫТ РАБОТЫ ─── -->
+  <div class="section card">
+    <h2>Опыт работы</h2>
 
-      <div class="job">
-        <div class="jobhead">
-          <p class="jobtitle"><strong>Яндекс Практикум</strong> — автор курсов по .NET</p>
-          <div class="jobmeta">Декабрь 2025 — настоящее время</div>
-        </div>
+    <!-- JOB 1 — текущее место, срок считается автоматически -->
+    <div class="job">
+      <div class="jobhead">
+        <p class="jobtitle"><strong>Fintech IQ</strong> — Senior .NET/C# разработчик</p>
+        <div class="jobmeta" id="job1meta">Февраль 2024 — настоящее время</div>
+      </div>
+      <p class="muted" style="margin-top:6px;">Разработка сервисов и продуктов для FinTech рынка. Высоконагруженные интеграционные контуры и сервисы коммуникаций.</p>
+
+      <div class="proj">
+        <div class="label">Проекты</div>
         <ul>
-          <li>Разрабатываю учебные материалы для курсов по .NET.</li>
+          <li><strong>Платёжные сервисы</strong></li>
+          <li><strong>Сервисы уведомлений</strong> (SMS, Email, Push, WhatsApp)</li>
         </ul>
       </div>
 
-      <div class="job">
-        <div class="jobhead">
-          <p class="jobtitle"><strong>IT‑incubator</strong> — преподаватель / ментор</p>
-          <div class="jobmeta">Январь 2024 — Апрель 2025</div>
-        </div>
+      <div class="proj long-only">
+        <div class="label">Обязанности</div>
         <ul>
-          <li>Проведение онлайн‑занятий по реляционным БД и SQL.</li>
-          <li>Помощь с домашними заданиями, код‑ревью, разбор практических кейсов.</li>
+          <li>Проработка требований и формализация постановок задач совместно с бизнесом и аналитиками.</li>
+          <li>Проектирование архитектуры сервисов и интеграций: контракты, потоки данных, схемы взаимодействия, ошибки и повторные попытки.</li>
+          <li>Разработка и поддержка интеграций со сторонними сервисами (HTTP/gRPC), сопровождение в проде.</li>
+          <li>Покрытие кода юнит‑ и интеграционными тестами, поддержка тестовой инфраструктуры.</li>
+          <li>Код‑ревью, повышение качества кода и единообразия решений в команде.</li>
+          <li>Онбординг и менторство новых сотрудников, помощь в разборе домена и архитектуры.</li>
+          <li>Участие в решении инцидентов: анализ причин, стабилизация, пост‑инцидентные улучшения.</li>
+          <li>Настройка и развитие CI/CD (сборка, тесты, релизные пайплайны), участие в улучшении процессов поставки.</li>
+          <li>Улучшение наблюдаемости: метрики, алерты, дашборды, технические логи и трассировка.</li>
         </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Достижения</div>
+        <ul>
+          <li>Реализовал интеграции с SMS/WhatsApp‑провайдерами для разных стран.</li>
+          <li>Повысил доставляемость: fallback‑отправка через альтернативного провайдера, retry‑политики, DLQ для проблемных сообщений.</li>
+          <li>Исправил критичный распределённый баг в SMS‑контуре; повысилась стабильность под нагрузкой.</li>
+          <li>Перевёл сервисы на stateless‑архитектуру, обеспечив горизонтальное масштабирование.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Стек</div>
+        <div class="chips">
+          <span class="chip">.NET 7/8</span><span class="chip">ASP.NET Core Web API</span>
+          <span class="chip">Blazor</span><span class="chip">gRPC</span>
+          <span class="chip">PostgreSQL</span><span class="chip">MongoDB</span>
+          <span class="chip">Redis</span><span class="chip">RabbitMQ</span>
+          <span class="chip">Kafka</span><span class="chip">ClickHouse</span>
+          <span class="chip">Docker</span><span class="chip">Kubernetes</span>
+          <span class="chip">Prometheus</span><span class="chip">Grafana</span>
+          <span class="chip">GitLab CI/CD</span><span class="chip">Git</span>
+        </div>
       </div>
     </div>
 
-    <!-- СЕРТИФИКАТЫ -->
-    <div class="section card">
-      <h2>Сертификаты</h2>
-      <ul>
-        <li><strong>OTUS</strong> — Software Architect (2025)</li>
-        <li><strong>Foundational C# with Microsoft</strong> (2023)</li>
-        <li><strong>SQL (Advanced) Certificate</strong> (2023)</li>
-        <li><strong>C# (Basic) Certificate</strong> (2021)</li>
-      </ul>
+    <!-- JOB 2 -->
+    <div class="job">
+      <div class="jobhead">
+        <p class="jobtitle"><strong>Finstar Financial Group</strong> — Senior .NET/C# разработчик</p>
+        <div class="jobmeta">Декабрь 2022 — Февраль 2024 · 1 год 3 месяца</div>
+      </div>
+      <p class="muted" style="margin-top:6px;">Разработка программных комплексов для международных проектов на рынке финансовых услуг.</p>
+
+      <div class="proj">
+        <div class="label">Проект</div>
+        <ul><li><strong>Кредитный конвейер / сервис подачи заявки на кредит</strong></li></ul>
+      </div>
+
+      <div class="proj long-only">
+        <div class="label">Обязанности</div>
+        <ul>
+          <li>Проработка задач с менеджерами и аналитиками: уточнение требований, согласование решений, декомпозиция.</li>
+          <li>Поддержка и разработка нового функционала в сервисе подачи заявки на кредит.</li>
+          <li>Рефакторинг и повышение поддерживаемости кода, участие в улучшении архитектурных решений.</li>
+          <li>Код‑ревью, сопровождение задач до прома, участие в разборе дефектов и инцидентов.</li>
+          <li>Оптимизация работы БД: анализ узких мест, оптимизация запросов и схем, перенос части логики на уровень приложения.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Достижения</div>
+        <ul>
+          <li>Миграция сервиса с <strong>.NET Framework 4.7.2 на .NET 6</strong>.</li>
+          <li>Доработки под нового заказчика без потери совместимости.</li>
+          <li>Оптимизация БД и критичных запросов; частичный перенос бизнес‑логики из БД в приложение.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Стек</div>
+        <div class="chips">
+          <span class="chip">.NET 6</span><span class="chip">.NET Framework 4.7.2</span>
+          <span class="chip">ASP.NET Core Web API</span><span class="chip">MS SQL</span>
+          <span class="chip">GitLab</span><span class="chip">Git</span>
+        </div>
+      </div>
     </div>
 
-    <!-- ОБРАЗОВАНИЕ -->
-    <div class="section card">
-      <h2>Образование и курсы</h2>
-      <ul>
-        <li><strong>OTUS</strong> — Software Architect (июнь 2025 — ноябрь 2025)</li>
-        <li><strong>НГУ</strong> — мехмат, математика (неоконченное высшее, 2019)</li>
-      </ul>
+    <!-- JOB 3 -->
+    <div class="job">
+      <div class="jobhead">
+        <p class="jobtitle"><strong>IT Smart Finance</strong> — Middle .NET/C# разработчик</p>
+        <div class="jobmeta">Март 2022 — Декабрь 2022 · 10 месяцев</div>
+      </div>
+      <p class="muted" style="margin-top:6px;">Онлайн‑сервисы по кредитованию.</p>
+
+      <div class="proj long-only">
+        <div class="label">Проект</div>
+        <ul><li><strong>Внутренняя CRM система</strong></li></ul>
+      </div>
+
+      <div class="proj long-only">
+        <div class="label">Обязанности</div>
+        <ul>
+          <li>Поддержка и развитие внутренней CRM системы компании.</li>
+          <li>Проработка требований с бизнесом, формирование постановок и оценок.</li>
+          <li>Разработка и внедрение нового функционала, сопровождение релизов.</li>
+          <li>Разбор инцидентов, код‑ревью, менторство коллег.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Достижения</div>
+        <ul>
+          <li>Разгрузил бэклог, ускорил выпуск изменений.</li>
+          <li>Оптимизация БД: снижение нагрузки с <strong>90% до 30%</strong>.</li>
+          <li>Новый алгоритм поиска и отправки данных во внешнюю систему.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Стек</div>
+        <div class="chips">
+          <span class="chip">.NET Core 2.2</span><span class="chip">.NET 6</span>
+          <span class="chip">ASP.NET Core MVC</span><span class="chip">ASP.NET Core Web API</span>
+          <span class="chip">PostgreSQL</span><span class="chip">JavaScript</span>
+          <span class="chip">jQuery</span><span class="chip">Git</span>
+        </div>
+      </div>
     </div>
 
-    <div class="footer">Обновлено: февраль 2026</div>
+    <!-- JOB 4 -->
+    <div class="job">
+      <div class="jobhead">
+        <p class="jobtitle"><strong>ООО «Инфопуш»</strong> — Junior .NET/C# разработчик</p>
+        <div class="jobmeta">Март 2021 — Март 2022 · 1 год 1 месяц</div>
+      </div>
+      <p class="muted" style="margin-top:6px;">Облачный сервис программы лояльности.</p>
+
+      <div class="proj long-only">
+        <div class="label">Проекты</div>
+        <ul>
+          <li>Сервис для карт <strong>Apple Wallet</strong></li>
+          <li>Сервис отправки <strong>Webhook</strong></li>
+          <li>Интеграции с кассовым оборудованием</li>
+        </ul>
+      </div>
+
+      <div class="proj long-only">
+        <div class="label">Обязанности</div>
+        <ul>
+          <li>Сбор и уточнение требований от клиентов и менеджеров.</li>
+          <li>Поддержка, устранение ошибок, разработка и сопровождение API.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Достижения</div>
+        <ul>
+          <li>Переписал внутренний API с <strong>.NET Framework 4.7.2 на .NET 5</strong>.</li>
+          <li>Разработал сервис Webhook‑отправки и сервис карт Apple Wallet / WalletPasses.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Стек</div>
+        <div class="chips">
+          <span class="chip">.NET 5</span><span class="chip">.NET Framework 4.7.2</span>
+          <span class="chip">ASP.NET Core Web API</span><span class="chip">MS SQL</span>
+          <span class="chip">RabbitMQ</span><span class="chip">ClickHouse</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JOB 5 -->
+    <div class="job">
+      <div class="jobhead">
+        <p class="jobtitle"><strong>ООО «Информа»</strong> — техподдержка (3 линия)</p>
+        <div class="jobmeta">Декабрь 2018 — Март 2021 · 2 года 4 месяца</div>
+      </div>
+      <p class="muted" style="margin-top:6px;">ПО для автоматизации работы компаний ЖКХ.</p>
+
+      <div class="proj long-only">
+        <div class="label">Обязанности</div>
+        <ul>
+          <li>Консультация клиентов, постановка задач на разработку, диагностика ошибок в БД.</li>
+          <li>Написание SQL‑запросов и хранимых процедур, разработка отчётов (FastReport, JasperReports).</li>
+          <li>Настройка обменов с внешними системами.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Достижения</div>
+        <ul>
+          <li>Разработал утилиту на <strong>C# WinForms</strong> для автоматизации работы с dbf‑файлами — исключил ручную работу поддержки в БД.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <div class="label">Стек</div>
+        <div class="chips">
+          <span class="chip">SQL</span><span class="chip">FirebirdSQL</span>
+          <span class="chip">PostgreSQL</span><span class="chip">FastReport</span>
+          <span class="chip">JasperReports</span>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script>
-    const html = document.documentElement;
-    const btn  = document.getElementById('themeBtn');
-    const icon = document.getElementById('themeIcon');
-    const lbl  = document.getElementById('themeLabel');
+  <!-- ─── ДОПОЛНИТЕЛЬНЫЕ ПРОЕКТЫ (скрыты в short) ─── -->
+  <div class="section card accent long-only">
+    <h2>Дополнительные проекты</h2>
+    <div class="job">
+      <div class="jobhead">
+        <p class="jobtitle"><strong>Яндекс Практикум</strong> — автор курсов по .NET</p>
+        <div class="jobmeta">Декабрь 2025 — настоящее время</div>
+      </div>
+      <ul><li>Разрабатываю учебные материалы для курсов по .NET.</li></ul>
+    </div>
+    <div class="job">
+      <div class="jobhead">
+        <p class="jobtitle"><strong>IT‑incubator</strong> — преподаватель / ментор</p>
+        <div class="jobmeta">Январь 2024 — Апрель 2025</div>
+      </div>
+      <ul>
+        <li>Проведение онлайн‑занятий по реляционным БД и SQL.</li>
+        <li>Помощь с домашними заданиями, код‑ревью, разбор практических кейсов.</li>
+      </ul>
+    </div>
+  </div>
 
-    // Восстановить сохранённую тему
-    const saved = localStorage.getItem('resume-theme');
-    if (saved) applyTheme(saved);
+  <!-- ─── СЕРТИФИКАТЫ (скрыты в short) ─── -->
+  <div class="section card long-only">
+    <h2>Сертификаты</h2>
+    <ul>
+      <li><strong>OTUS</strong> — Software Architect (2025)</li>
+      <li><strong>Foundational C# with Microsoft</strong> (2023)</li>
+      <li><strong>SQL (Advanced) Certificate</strong> (2023)</li>
+      <li><strong>C# (Basic) Certificate</strong> (2021)</li>
+    </ul>
+  </div>
 
-    btn.addEventListener('click', () => {
-      const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      localStorage.setItem('resume-theme', next);
-    });
+  <!-- ─── ОБРАЗОВАНИЕ (скрыто в short) ─── -->
+  <div class="section card long-only">
+    <h2>Образование и курсы</h2>
+    <ul>
+      <li><strong>OTUS</strong> — Software Architect (июнь 2025 — ноябрь 2025)</li>
+      <li><strong>НГУ</strong> — мехмат, математика (неоконченное высшее, 2019)</li>
+    </ul>
+  </div>
 
-    function applyTheme(theme) {
-      html.dataset.theme = theme;
-      if (theme === 'light') {
-        icon.textContent = '🌙';
-        lbl.textContent  = 'Тёмная тема';
-      } else {
-        icon.textContent = '☀️';
-        lbl.textContent  = 'Светлая тема';
-      }
+  <!-- ─── КРАТКАЯ СВОДКА: сертификаты + образование одной строкой ─── -->
+  <div class="section card" id="shortSummary" style="display:none;">
+    <h2>Обучение и сертификаты</h2>
+    <p style="margin:4px 0;color:var(--muted);font-size:14px;">
+      OTUS Software Architect (2025) · Foundational C# with Microsoft (2023) · SQL Advanced (2023)<br>
+      НГУ, мехмат — неоконченное высшее (2019)
+    </p>
+  </div>
+
+  <div class="footer">Обновлено: февраль 2026</div>
+</div>
+
+<script>
+  /* ══════════════════════════════════════
+     1. РАСЧЁТ СРОКА НА ТЕКУЩЕМ МЕСТЕ
+  ══════════════════════════════════════ */
+  (function () {
+    const start = new Date(2024, 1, 1); // Февраль 2024 (месяц 0-based)
+    const now   = new Date();
+
+    let years  = now.getFullYear() - start.getFullYear();
+    let months = now.getMonth()    - start.getMonth();
+    if (months < 0) { years--; months += 12; }
+
+    const parts = [];
+    if (years  > 0) parts.push(years  + ' ' + plural(years,  'год','года','лет'));
+    if (months > 0) parts.push(months + ' ' + plural(months, 'месяц','месяца','месяцев'));
+    const duration = parts.length ? ' · ' + parts.join(' ') : '';
+
+    document.getElementById('job1meta').textContent =
+      'Февраль 2024 — настоящее время' + duration;
+
+    function plural(n, one, few, many) {
+      const mod10 = n % 10, mod100 = n % 100;
+      if (mod10 === 1 && mod100 !== 11) return one;
+      if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return few;
+      return many;
     }
-  </script>
+  })();
+
+  /* ══════════════════════════════════════
+     2. ВЕРСИЯ РЕЗЮМЕ (query param + кнопка)
+  ══════════════════════════════════════ */
+  function getQueryVersion() {
+    return new URLSearchParams(location.search).get('v'); // 'short' | 'full' | null
+  }
+
+  function setVersion(v) {
+    // Обновить URL без перезагрузки
+    const url = new URL(location.href);
+    url.searchParams.set('v', v);
+    history.replaceState(null, '', url.toString());
+
+    applyVersion(v);
+  }
+
+  function applyVersion(v) {
+    const isShort = v === 'short';
+    document.body.classList.toggle('short-view', isShort);
+
+    document.getElementById('btnFull') .classList.toggle('active', !isShort);
+    document.getElementById('btnShort').classList.toggle('active',  isShort);
+
+    document.getElementById('versionHint').textContent = isShort
+      ? 'Ключевые факты · без деталей'
+      : 'Все детали и обязанности';
+
+    document.getElementById('shortSummary').style.display = isShort ? '' : 'none';
+  }
+
+  // Инициализация: читаем query-параметр
+  const qv = getQueryVersion();
+  applyVersion(qv === 'short' ? 'short' : 'full');
+
+  /* ══════════════════════════════════════
+     3. ТЕМА
+  ══════════════════════════════════════ */
+  const html     = document.documentElement;
+  const themeBtn = document.getElementById('themeBtn');
+  const icon     = document.getElementById('themeIcon');
+  const lbl      = document.getElementById('themeLabel');
+
+  const saved = localStorage.getItem('resume-theme');
+  if (saved) applyTheme(saved);
+
+  themeBtn.addEventListener('click', () => {
+    const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('resume-theme', next);
+  });
+
+  function applyTheme(theme) {
+    html.dataset.theme = theme;
+    icon.textContent   = theme === 'light' ? '🌙' : '☀️';
+    lbl.textContent    = theme === 'light' ? 'Тёмная тема' : 'Светлая тема';
+  }
+</script>
 </body>
 </html>
+
