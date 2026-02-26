@@ -6,11 +6,9 @@
   <meta name="description" content="Резюме — Антон Гребенкин, Senior .NET/C# разработчик" />
   <title>Антон Гребенкин — Senior .NET/C# Developer</title>
 
-  <!-- ─── FAVICON (SVG, встроенный) ─── -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f6feb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='white'%3E%7B%7D%3C/text%3E%3C/svg%3E" />
 
   <style>
-    /* ─── ТЁМНАЯ ТЕМА (default) ─── */
     :root, [data-theme="dark"] {
       --bg: #0e1526; --surface: #131d36; --surface2: #101a31;
       --header-bg: rgba(255,255,255,.055); --header-bg2: rgba(255,255,255,.02);
@@ -32,7 +30,6 @@
       --vbtn-active-bg: #2f6feb; --vbtn-active-text: #fff;
       --dl-bg: #2f6feb; --dl-bg-h: #1a56cc; --dl-text: #fff;
     }
-    /* ─── СВЕТЛАЯ ТЕМА ─── */
     [data-theme="light"] {
       --bg: #f0f4ff; --surface: #ffffff; --surface2: #e8eeff;
       --header-bg: rgba(255,255,255,.85); --header-bg2: rgba(255,255,255,.60);
@@ -68,9 +65,6 @@
 
     .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
 
-    /* ═══════════════════════════════════════
-       ПАНЕЛЬ УПРАВЛЕНИЯ
-    ═══════════════════════════════════════ */
     .controls {
       display: flex;
       justify-content: space-between;
@@ -136,7 +130,6 @@
     .theme-btn:hover { background: var(--btn-bg-h); border-color: var(--btn-bd-h); }
     .theme-btn .icon { font-size: 15px; line-height: 1; }
 
-    /* ─── HEADER ─── */
     header {
       position: relative; overflow: hidden;
       border-radius: 18px; border: 1px solid var(--line);
@@ -175,14 +168,11 @@
       backdrop-filter: blur(6px); transition: background .25s, border-color .25s;
     }
 
-    /* ─── БЕЙДЖ «краткое резюме» ─── */
-    /* Вынесен в отдельную строку под h1, не ломает layout */
     .short-badge-wrap {
-      display: none;           /* скрыт по умолчанию */
+      display: none;
       margin-top: 4px;
     }
     body.short-view .short-badge-wrap { display: block; }
-
     .short-badge {
       display: inline-block;
       font-size: 11.5px;
@@ -195,10 +185,8 @@
       white-space: nowrap;
     }
 
-    /* ─── GRID (about + skills) ─── */
     .grid { margin-top: 18px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
 
-    /* ─── CARDS ─── */
     .card {
       border-radius: 16px; border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--card-bg), var(--card-bg2));
@@ -221,7 +209,6 @@
     ul { margin: 10px 0 0 18px; padding: 0; }
     li { margin: 6px 0; color: var(--text); }
 
-    /* ─── CHIPS ─── */
     .chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
     .chip {
       border: 1px solid var(--chipBd); background: var(--chipBg);
@@ -229,7 +216,6 @@
       transition: background .25s, border-color .25s;
     }
 
-    /* ─── SECTIONS ─── */
     .section { margin-top: 16px; }
     .job { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 14px; }
     .job:first-child { border-top: none; padding-top: 0; margin-top: 0; }
@@ -254,7 +240,6 @@
       box-shadow: 0 0 0 3px var(--brandGlow); flex: 0 0 auto;
     }
 
-    /* ─── CTA ─── */
     .cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .btn {
       display: inline-flex; align-items: center; gap: 7px;
@@ -264,13 +249,11 @@
     }
     .btn:hover { border-color: var(--btn-bd-h); background: var(--btn-bg-h); }
 
-    /* ─── КОРОТКАЯ ВЕРСИЯ: что скрываем ─── */
     body.short-view .long-only { display: none !important; }
     body.short-view .about-full { display: none !important; }
     body.short-view .about-short { display: block !important; }
     .about-short { display: none; }
 
-    /* ─── КНОПКА СКАЧАТЬ ─── */
     .download-wrap {
       display: flex;
       justify-content: center;
@@ -304,12 +287,8 @@
     .download-btn:active { transform: translateY(0); }
     .download-btn .dl-icon { font-size: 18px; line-height: 1; }
 
-    /* ─── FOOTER ─── */
     .footer { margin-top: 20px; color: var(--muted); font-size: 13px; text-align: center; }
 
-    /* ═══════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════ */
     @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
 
     @media (max-width: 640px) {
@@ -332,31 +311,13 @@
       .chip { font-size: 12px; padding: 4px 9px; }
       .chips { gap: 6px; }
 
-      .controls {
-        flex-wrap: nowrap;
-        gap: 8px;
-        margin-bottom: 12px;
-      }
-      .controls-left {
-        flex: 1;
-        min-width: 0;
-        gap: 0;
-      }
-      .version-switch {
-        flex: 1;
-        min-width: 0;
-      }
-      .version-switch button {
-        flex: 1;
-        text-align: center;
-        padding: 9px 8px;
-        font-size: 13px;
-      }
+      .controls { flex-wrap: nowrap; gap: 8px; margin-bottom: 12px; }
+      .controls-left { flex: 1; min-width: 0; gap: 0; }
+      .version-switch { flex: 1; min-width: 0; }
+      .version-switch button { flex: 1; text-align: center; padding: 9px 8px; font-size: 13px; }
       .version-label { display: none; }
       .theme-btn .theme-label-text { display: none; }
       .theme-btn { padding: 9px 12px; gap: 0; }
-
-      /* кнопка скачать — чуть меньше на мобиле */
       .download-btn { font-size: 14px; padding: 12px 24px; }
     }
 
@@ -382,7 +343,6 @@
       a { color: #111; border-bottom: none; }
       .btn { display: none; }
       .controls { display: none; }
-      /* скрываем кнопку скачать при печати */
       .download-wrap { display: none; }
     }
   </style>
@@ -391,14 +351,13 @@
 <body>
 <div class="container">
 
-  <!-- ─── ПАНЕЛЬ УПРАВЛЕНИЯ ─── -->
   <div class="controls">
     <div class="controls-left">
       <div class="version-switch" role="group" aria-label="Версия резюме">
-        <button id="btnFull"  onclick="setVersion('full')"  class="active">📄 Развернуто</button>
-        <button id="btnShort" onclick="setVersion('short')">⚡ Коротко</button>
+        <button id="btnFull"  onclick="setVersion('full')">📄 Развернуто</button>
+        <button id="btnShort" onclick="setVersion('short')" class="active">⚡ Коротко</button>
       </div>
-      <span class="version-label" id="versionHint">Все детали и обязанности</span>
+      <span class="version-label" id="versionHint">Ключевые факты · без деталей</span>
     </div>
     <div class="theme-toggle">
       <button class="theme-btn" id="themeBtn" aria-label="Переключить тему">
@@ -408,7 +367,6 @@
     </div>
   </div>
 
-  <!-- ─── HEADER ─── -->
   <header>
     <div class="top">
       <div class="photo" aria-label="Фото">
@@ -416,7 +374,6 @@
       </div>
       <div class="hgroup">
         <h1>Антон Гребенкин</h1>
-        <!-- бейдж «краткое резюме» в отдельной строке — не ломает layout -->
         <div class="short-badge-wrap">
           <span class="short-badge">⚡ краткое резюме</span>
         </div>
@@ -440,10 +397,10 @@
       <div class="card accent">
         <h2>О себе</h2>
         <p class="about-short">
-          Senior .NET/C# разработчик, 7+ лет опыта. Финтех, распределённые системы, интеграции с внешними системами. Проектирую backend‑сервисы, работаю с микросервисной архитектурой, провожу код‑ревью, занимаюсь менторством. Двигаюсь в сторону техлида/архитектора.
+          .NET/C# разработчик, 7+ лет опыта. Финтех, распределённые системы, интеграции с внешними системами. Проектирую backend‑сервисы, работаю с микросервисной архитектурой, провожу код‑ревью, занимаюсь менторством. Двигаюсь в сторону техлида/архитектора.
         </p>
         <div class="about-full">
-          <p>Senior .NET/C# разработчик с опытом работы в финтехе и распределённых системах. Занимаюсь проектированием и разработкой backend‑сервисов, интеграциями с внешними системами, работой с базами данных и повышением надёжности и производительности решений. Есть опыт участия в проектировании архитектуры сервисов, оптимизации существующих решений и работе с микросервисной архитектурой.</p>
+          <p>.NET/C# разработчик с опытом работы в финтехе и распределённых системах. Занимаюсь проектированием и разработкой backend‑сервисов, интеграциями с внешними системами, работой с базами данных и повышением надёжности и производительности решений. Есть опыт участия в проектировании архитектуры сервисов, оптимизации существующих решений и работе с микросервисной архитектурой.</p>
           <p>Регулярно участвую в проработке требований с бизнесом и аналитиками, помогаю принимать архитектурные решения, декомпозирую задачи, провожу код‑ревью, участвую в решении инцидентов и настройке CI/CD. Работаю на стыке разработки и эксплуатации и стараюсь учитывать как функциональные, так и нефункциональные требования (надёжность, масштабируемость, наблюдаемость).</p>
           <p>Мне близка работа с людьми и развитие команды. Проводил групповые и индивидуальные занятия, сейчас дополнительно работаю автором курсов по .NET, помогаю разработчикам разбираться со сложными техническими и архитектурными вопросами.</p>
           <p>Прошёл курс Software Architect и двигаюсь в сторону роли техлида и архитектора: углубляю знания в архитектуре распределённых и микросервисных решений, DevOps‑практиках и связанных технологиях, постепенно расширяю экспертизу во frontend‑стеке. В работе ценю прозрачные процессы, честную коммуникацию и долгосрочное качество решений, стараюсь заранее видеть технические риски и предлагать практичные варианты их снижения.</p>
@@ -454,7 +411,12 @@
         <h2>Ключевые навыки</h2>
         <div class="chips" aria-label="Навыки">
           <span class="chip">C#</span><span class="chip">.NET 6/7/8</span>
-          <span class="chip">ASP.NET Core Web API</span><span class="chip">EF / EF Core</span>
+          <span class="chip">ASP.NET Core Web API</span><span class="chip">EF Core</span>
+          <span class="chip">Dapper</span>
+          <span class="chip">CSharpFunctionalExtensions</span>
+          <span class="chip">Blazor WASM</span>
+          <span class="chip">NUnit</span>
+          <span class="chip">Testcontainers</span>
           <span class="chip">PostgreSQL</span><span class="chip">MS SQL Server</span>
           <span class="chip">MongoDB</span><span class="chip">Redis</span>
           <span class="chip">RabbitMQ</span><span class="chip">Kafka</span>
@@ -468,10 +430,10 @@
     </div>
   </header>
 
-  <!-- ─── ОПЫТ РАБОТЫ ─── -->
   <div class="section card">
     <h2>Опыт работы</h2>
 
+    <!-- Fintech IQ -->
     <div class="job">
       <div class="jobhead">
         <p class="jobtitle"><strong>Fintech IQ</strong> — Senior .NET/C# разработчик</p>
@@ -523,6 +485,7 @@
       </div>
     </div>
 
+    <!-- Finstar -->
     <div class="job">
       <div class="jobhead">
         <p class="jobtitle"><strong>Finstar Financial Group</strong> — Senior .NET/C# разработчик</p>
@@ -561,16 +524,20 @@
       </div>
     </div>
 
+    <!-- IT Smart Finance -->
     <div class="job">
       <div class="jobhead">
         <p class="jobtitle"><strong>IT Smart Finance</strong> — Middle .NET/C# разработчик</p>
         <div class="jobmeta">Март 2022 — Декабрь 2022 · 10 месяцев</div>
       </div>
       <p class="muted" style="margin-top:6px;">Онлайн‑сервисы по кредитованию.</p>
-      <div class="proj long-only">
+
+      <!-- ✅ Проект теперь виден и в короткой версии -->
+      <div class="proj">
         <div class="label">Проект</div>
         <ul><li><strong>Внутренняя CRM система</strong></li></ul>
       </div>
+
       <div class="proj long-only">
         <div class="label">Обязанности</div>
         <ul>
@@ -599,6 +566,7 @@
       </div>
     </div>
 
+    <!-- Инфопуш -->
     <div class="job">
       <div class="jobhead">
         <p class="jobtitle"><strong>ООО «Инфопуш»</strong> — Junior .NET/C# разработчик</p>
@@ -637,12 +605,15 @@
       </div>
     </div>
 
+    <!-- Информа -->
     <div class="job">
       <div class="jobhead">
         <p class="jobtitle"><strong>ООО «Информа»</strong> — техподдержка (3 линия)</p>
         <div class="jobmeta">Декабрь 2018 — Март 2021 · 2 года 4 месяца</div>
       </div>
       <p class="muted" style="margin-top:6px;">ПО для автоматизации работы компаний ЖКХ.</p>
+
+
       <div class="proj long-only">
         <div class="label">Обязанности</div>
         <ul>
@@ -715,6 +686,13 @@
       НГУ, мехмат — неоконченное высшее (2019)
     </p>
   </div>
+  
+  <div class="download-wrap">
+  <a href="resume.pdf" download="Гребенкин_Антон.pdf" class="download-btn">
+    <span class="dl-icon">⬇️</span>
+    Скачать резюме (PDF)
+  </a>
+</div>
 
   <div class="footer">Обновлено: февраль 2026</div>
 </div>
@@ -755,27 +733,51 @@
       : 'Все детали и обязанности';
     document.getElementById('shortSummary').style.display = isShort ? '' : 'none';
   }
-  applyVersion(getQueryVersion() === 'short' ? 'short' : 'full');
 
+  // ─── URL-параметр ?v=full/short имеет приоритет, иначе short по умолчанию
+  const qv = getQueryVersion();
+  applyVersion(qv === 'full' || qv === 'short' ? qv : 'short');
+
+  // ─── ТЕМА: приоритет — localStorage → системная → dark
   const html     = document.documentElement;
   const themeBtn = document.getElementById('themeBtn');
   const icon     = document.getElementById('themeIcon');
   const lbl      = document.getElementById('themeLabel');
-  const saved    = localStorage.getItem('resume-theme');
-  if (saved) applyTheme(saved);
-  themeBtn.addEventListener('click', () => {
-    const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    localStorage.setItem('resume-theme', next);
-  });
+
+  function getInitialTheme() {
+    const saved = localStorage.getItem('resume-theme');
+    if (saved === 'light' || saved === 'dark') return saved;
+    // Определяем системную тему
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light';
+    }
+    return 'dark';
+  }
+
   function applyTheme(theme) {
     html.dataset.theme = theme;
     icon.textContent   = theme === 'light' ? '🌙' : '☀️';
     lbl.textContent    = theme === 'light' ? 'Тёмная тема' : 'Светлая тема';
   }
+
+  applyTheme(getInitialTheme());
+
+  themeBtn.addEventListener('click', () => {
+    const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('resume-theme', next);
+  });
+
+  // Следим за изменением системной темы (если пользователь не выбирал вручную)
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+    if (!localStorage.getItem('resume-theme')) {
+      applyTheme(e.matches ? 'light' : 'dark');
+    }
+  });
 </script>
 </body>
 </html>
+
 
 
 
